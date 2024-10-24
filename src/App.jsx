@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Routes>
-        {/* Open Routes */}
+        {/* Public Routes */}
         <Route path="/" element={<OpenLayout />}>
           <Route index element={<Home />} />
           <Route path="/about-us" element={<About />} />
