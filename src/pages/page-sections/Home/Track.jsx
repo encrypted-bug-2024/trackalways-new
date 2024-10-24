@@ -5,10 +5,10 @@ import search from '../../../assets/search.svg';
 const Track = () => {
     return (
        <>
-        <section className="flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto mt-16 mb-16 bg-white p-5 rounded-lg min-h-[80vh]">
+        <section className="flex flex-col sm:mt-2 sm:mb-2 md:flex-row items-center justify-between w-11/12 mx-auto mt-16 -mb-20 bg-white p-5 rounded-lg min-h-[80vh]">
   <div className="flex-2 flex flex-col items-center md:items-start">
     {/* Heading */}
-    <h2 className="font-bold text-2xl md:text-4xl lg:text-6xl mb-8 text-center md:text-left line-clamp-3">
+    <h2 className="font-bold text-2xl md:text-4xl lg:text-6xl mb-12 text-center md:text-left ">
       Increase fleet visibility with our vehicle tracking app.
     </h2>
 

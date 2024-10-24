@@ -5,14 +5,14 @@ import logo4 from '../../../assets/d.png';
 
 const Card = () => {
   return (
-    <section className="flex flex-wrap justify-center gap-4 p-4 md:p-16 mt-24"> {/* Adjusted padding */}
+    <section className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-11/12 mt-24 mb-10 ">
       {/* Box 1 */}
-      <div className="flex flex-col items-center justify-center w-full sm:w-80 md:w-80 h-96 p-4 border rounded-lg shadow-md max-w-xs"> {/* Responsive width */}
+      <div className="flex flex-col items-center justify-center h-96 p-4 rounded-lg ">
         <div className="flex items-center justify-center w-28 h-28 bg-lightgreen rounded-full">
           <img
             src={logo1}
             alt="Icon"
-            className="bg-green-300 rounded-full w-24 h-24 object-contain"
+            className="bg-green-300 rounded-full p-4 w-20 h-20 object-contain" // Reduced the size and used object-contain
           />
         </div>
         <h2 className="mt-4 text-lg font-bold">Track Your Fleet</h2>
@@ -21,13 +21,14 @@ const Card = () => {
         </p>
       </div>
 
+
       {/* Box 2 */}
-      <div className="flex flex-col items-center justify-center w-full sm:w-80 md:w-80 h-96 p-4 border rounded-lg shadow-md max-w-xs">
-        <div className="flex items-center justify-center w-28 h-28 bg-lightgreen rounded-full">
+      <div className="flex flex-col items-center justify-center h-96 p-4 rounded-lg max-w-xs">
+        <div className="flex items-center  justify-center w-28 h-28 bg-lightgreen rounded-full">
           <img
             src={logo2}
             alt="Icon"
-            className="bg-green-300 rounded-full w-24 h-24 object-contain"
+            className="bg-green-300 rounded-full p-4 w-20 h-20 object-contain"  // Adjusted size
           />
         </div>
         <h2 className="mt-4 text-lg font-bold">Access Reports Easily</h2>
@@ -37,12 +38,12 @@ const Card = () => {
       </div>
 
       {/* Box 3 */}
-      <div className="flex flex-col items-center justify-center w-full sm:w-80 md:w-80 h-96 p-4 border rounded-lg shadow-md max-w-xs">
+      <div className="flex flex-col items-center justify-center h-96 p-4 rounded-lg max-w-xs">
         <div className="flex items-center justify-center w-28 h-28 bg-lightgreen rounded-full">
           <img
             src={logo3}
             alt="Icon"
-            className="bg-green-300 rounded-full w-24 h-24 object-contain"
+            className="bg-green-300 rounded-full p-4 w-20 h-20 object-contain"  // Adjusted size
           />
         </div>
         <h2 className="mt-4 text-lg font-bold">Lower Costs</h2>
@@ -52,12 +53,12 @@ const Card = () => {
       </div>
 
       {/* Box 4 */}
-      <div className="flex flex-col items-center justify-center w-full sm:w-80 md:w-80 h-96 p-4 border rounded-lg shadow-md max-w-xs">
+      <div className="flex flex-col items-center justify-center h-96 p-4 rounded-lg max-w-xs">
         <div className="flex items-center justify-center w-28 h-28 bg-lightgreen rounded-full">
           <img
             src={logo4}
             alt="Icon"
-            className="bg-green-300 rounded-full w-24 h-24 object-contain"
+            className="bg-green-300 rounded-full p-4 w-20 h-20 object-contain"
           />
         </div>
         <h2 className="mt-4 text-lg font-bold">Increase Profits</h2>

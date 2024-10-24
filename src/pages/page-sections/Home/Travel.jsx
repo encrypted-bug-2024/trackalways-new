@@ -4,7 +4,7 @@ import { FaArrowRight } from 'react-icons/fa';
 const Travel = () => {
    return(
     <>
-    <section className="flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto mt-8 bg-white p-5 rounded-lg min-h-[80 vh] gap-x-8"> 
+    <section className="flex flex-col md:flex-row items-center justify-between w-11/12 md:-mb-48 sm:-mt-10 mx-auto mt-8 bg-white p-5 rounded-lg min-h-[80 vh] gap-x-8"> 
   <div className="flex-2 flex flex-col items-center md:items-start">
     {/* Heading */}
     <h2 className="font-bold text-2xl md:text-4xl lg:text-6xl mb-8 text-center md:text-left line-clamp-3">

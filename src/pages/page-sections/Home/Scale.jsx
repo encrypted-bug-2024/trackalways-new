@@ -2,10 +2,10 @@ import React from 'react';
 
 const Scale = () => {
   return (
-    <section className="bg-[#439600] text-white w-full py-10 flex flex-col items-center">
-      <div className="flex items-center justify-between w-full max-w-screen-xl mx-auto mb-4 px-4 flex-wrap">
+    <section className="bg-[#439600] text-white w-full -mb-14 py-10 grid grid-cols-3 ">
+     {/* <div className="flex items-center justify-between w-full max-w-screen-xl mx-auto mb-4 px-4 flex-wrap">*/}
         {/* Left Arrows */}
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-1 col-span-1">
           <svg
             className="w-4 h-4 bounce-left-right xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-12 lg:h-12"
             fill="none"
@@ -51,12 +51,12 @@ const Scale = () => {
         </div>
 
         {/* Text */}
-        <h3 className="text-xs sm:text-sm md:text-base lg:text-3xl flex-grow text-center mx-2">
+        <h3 className="text-xs sm:text-x md:text-base lg:text-3xl flex-grow text-center mx-2 col-span-full">
           We make fleet tracking more manageable
         </h3>
 
         {/* Right Arrows */}
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-1 col-span-1">
           <svg
             className="w-4 h-4 bounce-left-right xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-12 lg:h-12"
             fill="none"
@@ -100,7 +100,7 @@ const Scale = () => {
             />
           </svg>
         </div>
-      </div>
+      {/* </div>  */}
     </section>
   );
 };

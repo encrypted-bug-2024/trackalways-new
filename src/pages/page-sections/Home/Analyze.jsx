@@ -4,14 +4,14 @@ import { FaArrowRight } from 'react-icons/fa';
 const Analyzse = () => {
   return(
     <>
-    <section className="flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto mt-8 bg-white p-5 rounded-lg  min-h-[100vh] gap-x-8">
+    <section className="flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto mt-8 md:mt-48 bg-white p-5 rounded-lg  min-h-[70vh] gap-x-8">
   
   {/* Left Side: PNG Image */}
   <div className="flex-1 flex justify-center mt-4 md:mt-0 relative">
     <img
       src={analyze}  // Replace with your image path
       alt="New Fleet Management"
-      className="max-w-[250px] md:max-w-[200px] lg:max-w-[500px] h-auto"
+      className="max-w-[320px] mb-4 md:max-w-[200px] lg:max-w-[500px] h-auto"
     />
   </div>
 
