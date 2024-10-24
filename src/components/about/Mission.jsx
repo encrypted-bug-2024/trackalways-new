@@ -1,6 +1,6 @@
-import image1 from '../../../assets/s1.png'; 
-import image2 from '../../../assets/s2.png'; 
-import image3 from '../../../assets/s3.png'; 
+import image1 from '../../assets/s1.png'; 
+import image2 from '../../assets/s2.png'; 
+import image3 from '../../assets/s3.png'; 
 
 const Mission = () => {
     return (

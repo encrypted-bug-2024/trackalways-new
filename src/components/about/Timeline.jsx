@@ -1,8 +1,8 @@
 import React from "react";
-import time1 from '../../../assets/time1.png';
-import time2 from '../../../assets/time2.png';
-import time3 from '../../../assets/time3.png';
-import time4 from '../../../assets/time4.png';
+import time1 from '../../assets/time1.png';
+import time2 from '../../assets/time2.png';
+import time3 from '../../assets/time3.png';
+import time4 from '../../assets/time4.png';
 
 const Timeline = () => {
   const timelineData = [

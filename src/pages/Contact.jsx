@@ -1,6 +1,5 @@
 import banner from '../assets/contact-banner.png';
 import mapImage from '../assets/map.png'; // Adjust the path as necessary
-import Footer from '../components/Footer';
 
 const Contact = () => {
   return (
@@ -37,7 +36,7 @@ const Contact = () => {
             <h3 className="hidden md:block text-9xl mb-4">Contact Us</h3>
             <h4 className="text-white text-4xl md:text-6xl mb-4">Talk to the team, we are here to help!</h4>
             <p className="text-white text-sm md:text-base mb-4">
-              If you wish to contact us, fill in the form and we will get back 
+              If you wish to contact us, fill in the form and we will get back
               to you ASAP!
             </p>
           </div>
@@ -117,10 +116,9 @@ const Contact = () => {
         <img
           src={mapImage}
           alt="Map"
-          className="w-full h-auto max-w-[1200px] rounded-lg" 
+          className="w-full h-auto max-w-[1200px] rounded-lg"
         />
       </div>
-      <Footer />
     </>
   );
 };

@@ -39,7 +39,7 @@ const Product = () => {
     setCurrentPage(1); // Reset to first page on new search
   };
 
-  return ( 
+  return (
     <>
       <div className="relative">
         <nav className="bg-gray-800 text-white p-4">
@@ -66,9 +66,9 @@ const Product = () => {
 
       {/* Wrapper Div to add 80px gap on left and right */}
       <div className="px-20"> {/* Adds 80px padding on left and right */}
-  
+
         {/* Heading and Search */}
-        <div className="flex justify-between items-center mb-10 mt-24 "> 
+        <div className="flex justify-between items-center mb-10 mt-24 ">
           <h1 className="text-left text-gray-700 text-5xl font-bold">Our products</h1>
         </div>
 
@@ -77,7 +77,7 @@ const Product = () => {
           <input
             type="text"
             placeholder="Search An Item.."
-            className="border p-4 w-full h-14 rounded-full pr-14" 
+            className="border p-4 w-full h-14 rounded-full pr-14"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyDown={(e) => {
@@ -93,31 +93,31 @@ const Product = () => {
           </div>
         </div>
 
-       {/* Products */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-  {currentProducts.map(product => (
-    <div key={product.id} className="border-2 border-black rounded-2xl shadow-md bg-[#439600] overflow-hidden flex flex-col"> {/* Increased border thickness and color, doubled corner radius */}
-      <img 
-        src={product.image} 
-        alt={product.name} 
-        className="w-full h-[70%] object-cover" // Takes the top 70% of the card
-      />
-      <div className="flex-grow p-4 flex flex-col justify-between">
-        <h2 className="text-white text-xl font-semibold">{product.name}</h2>
-        <p className="text-white mt-2 mb-2">TrackAlways</p>
-        
-        {/* Horizontal line */}
-        <div className="border-t border-gray-300 my-2"></div>
-        
-        {/* See Now Button */}
-        <Link to={`/product/${product.id}`} className="flex items-center justify-center text-white py-2 rounded-lg mt-2">
-          <span className="mr-2">See Now</span>
-          <FaArrowRight className="ml-1 w-6" />
-        </Link>
-      </div>
-    </div>
-  ))}
-</div>
+        {/* Products */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {currentProducts.map(product => (
+            <div key={product.id} className="border-2 border-black rounded-2xl shadow-md bg-[#439600] overflow-hidden flex flex-col"> {/* Increased border thickness and color, doubled corner radius */}
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-[70%] object-cover" // Takes the top 70% of the card
+              />
+              <div className="flex-grow p-4 flex flex-col justify-between">
+                <h2 className="text-white text-xl font-semibold">{product.name}</h2>
+                <p className="text-white mt-2 mb-2">TrackAlways</p>
+
+                {/* Horizontal line */}
+                <div className="border-t border-gray-300 my-2"></div>
+
+                {/* See Now Button */}
+                <Link to={`/product/${product.id}`} className="flex items-center justify-center text-white py-2 rounded-lg mt-2">
+                  <span className="mr-2">See Now</span>
+                  <FaArrowRight className="ml-1 w-6" />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* Pagination */}
         <div className="mt-6 flex justify-center">

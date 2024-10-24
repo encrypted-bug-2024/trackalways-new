@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png";
-import store from "../assets/store.jpg";
+import logo from "../../assets/logo.png";
+import store from "../../assets/store.jpg";
 import { FaAngleDown, FaAngleRight, FaArrowRight, FaBars, FaTimes } from "react-icons/fa";
 
 // Reusable Dropdown Item Component

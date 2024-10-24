@@ -1,9 +1,9 @@
 import React from 'react';
-import tata from '../../../assets/tata.png';
-import jio from '../../../assets/jio.png';
-import bansal from '../../../assets/bansal.png';
-import skoda from '../../../assets/skoda.png';
-import ashok from '../../../assets/ashok.png';
+import tata from '../../assets/tata.png';
+import jio from '../../assets/jio.png';
+import bansal from '../../assets/bansal.png';
+import skoda from '../../assets/skoda.png';
+import ashok from '../../assets/ashok.png';
 
 const Clients = () => {
   const clientLogos = [

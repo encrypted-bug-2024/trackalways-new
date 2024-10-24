@@ -1,4 +1,4 @@
-import analyze from '../../../assets/analyze.avif';
+import analyze from '../../assets/analyze.avif';
 import { FaArrowRight } from 'react-icons/fa';
 
 const Analyzse = () => {

@@ -1,7 +1,7 @@
-import logo1 from '../../../assets/a.png';
-import logo2 from '../../../assets/b.png';
-import logo3 from '../../../assets/c.png';
-import logo4 from '../../../assets/d.png';
+import logo1 from '../../assets/a.png';
+import logo2 from '../../assets/b.png';
+import logo3 from '../../assets/c.png';
+import logo4 from '../../assets/d.png';
 
 const Card = () => {
   return (

@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './components/shared/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
 import Career from './pages/Career.jsx';
+import Footer from './components/shared/Footer.jsx';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/careers" element={<Career />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

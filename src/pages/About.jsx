@@ -1,10 +1,9 @@
-import Hero from './page-sections/About/Hero';
-import Info from './page-sections/About/Info';
-import WhyUs from './page-sections/About/WhyUs';
-import Mission from './page-sections/About/Mission';
-import Clients from './page-sections/About/Clients';
-import Timeline from './page-sections/About/Timeline';
-import Footer from '../components/Footer';
+import Hero from '../components/about/Hero';
+import Info from '../components/about/Info';
+import WhyUs from '../components/about/WhyUs';
+import Mission from '../components/about/Mission';
+import Clients from '../components/about/Clients';
+import Timeline from '../components/about/Timeline';
 
 const About = () => {
   return (
@@ -15,7 +14,6 @@ const About = () => {
        <Mission />
        <Clients />
        <Timeline />
-       <Footer />
     </>
   );
 };

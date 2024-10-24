@@ -1,4 +1,4 @@
-import track from '../../../assets/track.svg'
+import track from '../../assets/track.svg'
 import { FaArrowRight } from 'react-icons/fa';
 
 const Travel = () => {

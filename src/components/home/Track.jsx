@@ -1,6 +1,6 @@
 import { FaArrowRight } from 'react-icons/fa';
-import newImage from '../../../assets/product.webp'; 
-import search from '../../../assets/search.svg';
+import newImage from '../../assets/product.webp'; 
+import search from '../../assets/search.svg';
 
 const Track = () => {
     return (

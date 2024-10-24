@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import banner from '../assets/career.jpg';
 import { FaArrowRight } from 'react-icons/fa';
-import Footer from "../components/Footer";
 
 const Career = () => {
   const [activeForm, setActiveForm] = useState('internship');
@@ -35,23 +34,21 @@ const Career = () => {
       <div className="bg-white p-8 mx-4 md:mx-8 lg:mx-20">
         {/* Buttons */}
         <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-44 mt-8 mb-6">
-  <button
-    className={`${
-      activeForm === 'internship' ? 'bg-[#BEF269]' : 'bg-[#969696] text-white'
-    } w-80 h-16 px-10 rounded hover:bg-[#BEF269] text-center text-xl`}
-    onClick={() => setActiveForm('internship')}
-  >
-    Apply for Internship
-  </button>
-  <button
-    className={`${
-      activeForm === 'job' ? 'bg-[#BEF269]' : 'bg-[#969696] text-white'
-    } w-80 h-16 px-10 rounded hover:bg-[#BEF269] text-center text-xl`}
-    onClick={() => setActiveForm('job')}
-  >
-    Apply for Job
-  </button>
-</div>
+          <button
+            className={`${activeForm === 'internship' ? 'bg-[#BEF269]' : 'bg-[#969696] text-white'
+              } w-80 h-16 px-10 rounded hover:bg-[#BEF269] text-center text-xl`}
+            onClick={() => setActiveForm('internship')}
+          >
+            Apply for Internship
+          </button>
+          <button
+            className={`${activeForm === 'job' ? 'bg-[#BEF269]' : 'bg-[#969696] text-white'
+              } w-80 h-16 px-10 rounded hover:bg-[#BEF269] text-center text-xl`}
+            onClick={() => setActiveForm('job')}
+          >
+            Apply for Job
+          </button>
+        </div>
 
         {/* Internship Form */}
         {activeForm === 'internship' && (
@@ -125,7 +122,7 @@ const Career = () => {
                 <label className="text-lg font-semibold mb-1 text-gray-600">Upload Resume*</label>
                 <input
                   type="file"
-                  className="hidden" 
+                  className="hidden"
                   id="uploadResume"
                 />
                 <label
@@ -146,13 +143,13 @@ const Career = () => {
               ></textarea>
             </div>
 
-            {/* Submit Button */} 
-        <div className="flex justify-center" style={{ marginTop: '90px', marginBottom: '60px' }}>
-          <button className="bg-white text-[#439600] border border-[#439600] font-semibold px-8 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 flex items-center justify-center">
-            SUBMIT
-           <FaArrowRight className="ml-2" />
-          </button>
-        </div>
+            {/* Submit Button */}
+            <div className="flex justify-center" style={{ marginTop: '90px', marginBottom: '60px' }}>
+              <button className="bg-white text-[#439600] border border-[#439600] font-semibold px-8 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 flex items-center justify-center">
+                SUBMIT
+                <FaArrowRight className="ml-2" />
+              </button>
+            </div>
 
 
           </form>
@@ -226,17 +223,16 @@ const Career = () => {
 
             {/* Submit Button */}
             <div className="flex justify-center mt-6">
-            <div className="flex justify-center" style={{ marginTop: '90px', marginBottom: '60px' }}>
-          <button className="bg-white text-[#439600] border border-[#439600] font-semibold px-8 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 flex items-center justify-center">
-            SUBMIT
-           <FaArrowRight className="ml-2" />
-          </button>
-        </div>
+              <div className="flex justify-center" style={{ marginTop: '90px', marginBottom: '60px' }}>
+                <button className="bg-white text-[#439600] border border-[#439600] font-semibold px-8 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 flex items-center justify-center">
+                  SUBMIT
+                  <FaArrowRight className="ml-2" />
+                </button>
+              </div>
             </div>
           </form>
         )}
       </div>
-      <Footer />
     </>
   );
 };
