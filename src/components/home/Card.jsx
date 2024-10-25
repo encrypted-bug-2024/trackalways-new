@@ -23,7 +23,7 @@ const Card = () => {
 
 
       {/* Box 2 */}
-      <div className="flex flex-col items-center justify-center h-96 p-4 rounded-lg max-w-xs">
+      <div className="flex flex-col items-center justify-center h-96 p-4 rounded-lg">
         <div className="flex items-center  justify-center w-28 h-28 bg-lightgreen rounded-full">
           <img
             src={logo2}
@@ -38,7 +38,7 @@ const Card = () => {
       </div>
 
       {/* Box 3 */}
-      <div className="flex flex-col items-center justify-center h-96 p-4 rounded-lg max-w-xs">
+      <div className="flex flex-col items-center justify-center h-96 p-4 rounded-lg">
         <div className="flex items-center justify-center w-28 h-28 bg-lightgreen rounded-full">
           <img
             src={logo3}
@@ -53,7 +53,7 @@ const Card = () => {
       </div>
 
       {/* Box 4 */}
-      <div className="flex flex-col items-center justify-center h-96 p-4 rounded-lg max-w-xs">
+      <div className="flex flex-col items-center justify-center h-96 p-4 rounded-lg">
         <div className="flex items-center justify-center w-28 h-28 bg-lightgreen rounded-full">
           <img
             src={logo4}
