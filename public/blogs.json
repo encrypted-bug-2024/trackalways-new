@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "title": "UX review presentations",
+      "category": "Design",
+      "author": "Olivia Rhye",
+      "date": "20 Jan 2022",
+      "image": "https://www.wework.com/ideas/wp-content/uploads/sites/4/2021/12/20190305-WeWork-Wells-Fargo-Center-Office-2_twitter.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": 2,
+      "title": "Web design trends 2022",
+      "category": "Design",
+      "author": "James Lee",
+      "date": "15 Feb 2022",
+      "image": "https://images.unsplash.com/photo-1630659508738-74252299fa4d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2ZmaWNlJTIwd29ya3xlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Explore the latest design trends for modern web experiences."
+    },
+    {
+      "id": 3,
+      "title": "Developing with React",
+      "category": "Development",
+      "author": "Sophia Smith",
+      "date": "5 Mar 2022",
+      "image": "https://image.cnbcfm.com/api/v1/image/106724963-1601542574841-gettyimages-1248900510-262a5684.jpeg?v=1631893427&w=1920&h=1080",
+      "description": "An introduction to developing modern web apps using React."
+    },
+    {
+      "id": 4,
+      "title": "Accessibility in UI design",
+      "category": "Design",
+      "author": "Chris Brown",
+      "date": "10 Apr 2022",
+      "image": "https://d31fl6kv41tqjh.cloudfront.net/v2/pages/_1200x630_crop_center-center_82_none/408561/DALL%C2%B7E-2024-05-08-14.45.07-A-modern-office-environment-where-AI-driven-systems-are-integrated-into-everyday-operations.-The-office-features-diverse-employees-interacting-with-va_2024-05-21-121346_xuoq.jpg?mtime=1716293626",
+      "description": "Best practices for making user interfaces accessible to all users."
+    },
+    {
+      "id": 5,
+      "title": "Effective UX research methods",
+      "category": "Research",
+      "author": "Emma Johnson",
+      "date": "22 May 2022",
+      "image": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/O2019-Hero-image-x2:VP1-539x440?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1920&hei=720&qlt=75&fit=constrain",
+      "description": "Methods for conducting impactful UX research."
+    },
+    {
+      "id": 6,
+      "title": "Intro to JavaScript frameworks",
+      "category": "Development",
+      "author": "Liam Chen",
+      "date": "8 Jun 2022",
+      "image": "https://media.istockphoto.com/id/1372099419/photo/group-of-business-colleagues-working-in-the-office.jpg?s=612x612&w=0&k=20&c=MLP5yBR4p2xMZtdQPfF87cPnJYM0Dh1w2sbPQx2bQEU=",
+      "description": "Overview of popular JavaScript frameworks and their use cases."
+    },
+    {
+      "id": 7,
+      "title": "Accessibility in UI design",
+      "category": "Design",
+      "author": "Chris Brown",
+      "date": "10 Apr 2022",
+      "image": "https://d31fl6kv41tqjh.cloudfront.net/v2/pages/_1200x630_crop_center-center_82_none/408561/DALL%C2%B7E-2024-05-08-14.45.07-A-modern-office-environment-where-AI-driven-systems-are-integrated-into-everyday-operations.-The-office-features-diverse-employees-interacting-with-va_2024-05-21-121346_xuoq.jpg?mtime=1716293626",
+      "description": "Best practices for making user interfaces accessible to all users."
+    },
+    {
+      "id": 8,
+      "title": "Effective UX research methods",
+      "category": "Research",
+      "author": "Emma Johnson",
+      "date": "22 May 2022",
+      "image": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/O2019-Hero-image-x2:VP1-539x440?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1920&hei=720&qlt=75&fit=constrain",
+      "description": "Methods for conducting impactful UX research."
+    },
+    {
+      "id": 9,
+      "title": "Intro to JavaScript frameworks",
+      "category": "Development",
+      "author": "Liam Chen",
+      "date": "8 Jun 2022",
+      "image": "https://media.istockphoto.com/id/1372099419/photo/group-of-business-colleagues-working-in-the-office.jpg?s=612x612&w=0&k=20&c=MLP5yBR4p2xMZtdQPfF87cPnJYM0Dh1w2sbPQx2bQEU=",
+      "description": "Overview of popular JavaScript frameworks and their use cases."
+    },
+    {
+      "id": 10,
+      "title": "UX review presentations",
+      "category": "Design",
+      "author": "Olivia Rhye",
+      "date": "20 Jan 2022",
+      "image": "https://www.wework.com/ideas/wp-content/uploads/sites/4/2021/12/20190305-WeWork-Wells-Fargo-Center-Office-2_twitter.jpg",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": 11,
+      "title": "Web design trends 2022",
+      "category": "Design",
+      "author": "James Lee",
+      "date": "15 Feb 2022",
+      "image": "https://images.unsplash.com/photo-1630659508738-74252299fa4d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b2ZmaWNlJTIwd29ya3xlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Explore the latest design trends for modern web experiences."
+    },
+    {
+      "id": 12,
+      "title": "Developing with React",
+      "category": "Development",
+      "author": "Sophia Smith",
+      "date": "5 Mar 2022",
+      "image": "https://image.cnbcfm.com/api/v1/image/106724963-1601542574841-gettyimages-1248900510-262a5684.jpeg?v=1631893427&w=1920&h=1080",
+      "description": "An introduction to developing modern web apps using React."
+    }
+  ]
+  

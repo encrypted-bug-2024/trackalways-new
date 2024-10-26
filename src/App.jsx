@@ -5,6 +5,7 @@ import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail.jsx';
 import Contact from './pages/Contact';
 import Career from './pages/Career.jsx';
+import Blog from './pages/BlogSection';
 import PageNotFound from './pages/PageNotFound.jsx';
 import OpenLayout from './layout/OpenLayout.jsx';
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/careers" element={<Career />} />
+          <Route path="/blog" element={<Blog />} />
         </Route>
 
         {/* 404 Page */}
