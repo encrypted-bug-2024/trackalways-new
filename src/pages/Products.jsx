@@ -100,7 +100,7 @@ const Product = () => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-[70%] object-cover" // Takes the top 70% of the card
+                className="bg-white w-full h-[70%] object-cover" // Takes the top 70% of the card
               />
               <div className="flex-grow p-4 flex flex-col justify-between">
                 <h2 className="text-white text-xl font-semibold">{product.name}</h2>
@@ -120,17 +120,28 @@ const Product = () => {
         </div>
 
         {/* Pagination */}
-        <div className="mt-6 flex justify-center">
-          {Array.from({ length: Math.ceil(filteredProducts.length / productsPerPage) }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => paginate(index + 1)}
-              className={`mx-2 px-4 py-2 ${currentPage === index + 1 ? 'bg-blue-500 text-white' : 'bg-gray-200'} rounded-lg`}
-            >
-              {index + 1}
-            </button>
-          ))}
-        </div>
+<div className="mt-6 mb-16 flex justify-center">
+  {Array.from({ length: Math.ceil(filteredProducts.length / productsPerPage) }).slice(0, 3).map((_, index) => (
+    <button
+      key={index}
+      onClick={() => paginate(index + 1)}
+      className={`mx-2 px-4 py-2 ${currentPage === index + 1 ? 'bg-[#439600] text-white' : 'bg-[#439600]/50'} rounded-lg`}
+    >
+      {index + 1}
+    </button>
+  ))}
+  
+  {/* Next Button */}
+  {currentPage < Math.ceil(filteredProducts.length / productsPerPage) && (
+    <button
+      onClick={() => paginate(currentPage + 1)}
+      className="mx-2 px-4 py-2 bg-[#439600] text-white rounded-lg"
+    >
+      Next
+    </button>
+  )}
+</div>
+
       </div>
     </>
   );
