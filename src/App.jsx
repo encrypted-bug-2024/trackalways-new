@@ -6,6 +6,8 @@ import ProductDetail from './pages/ProductDetail.jsx';
 import Contact from './pages/Contact';
 import Career from './pages/Career.jsx';
 import Blog from './pages/BlogSection';
+import Media from './pages/Media.jsx';
+import Industry from './pages/Industries.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
 import OpenLayout from './layout/OpenLayout.jsx';
 
@@ -22,6 +24,8 @@ function App() {
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/careers" element={<Career />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/media-coverage" element={<Media />} />
+          <Route path="/industry" element={<Industry />} />
         </Route>
 
         {/* 404 Page */}

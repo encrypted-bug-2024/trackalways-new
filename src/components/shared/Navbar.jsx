@@ -136,33 +136,33 @@ const Navbar = () => {
                 >
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
                     <DropdownItem 
-                      title="Industry 1" 
-                      description="Overview of Industry 1." 
-                      to="/industry1" 
+                      title="Sales and Services" 
+                      description="Overview of Industry Sales and Services." 
+                      to="/industry" 
                       onClick={closeDropdowns} // Close dropdown on click
                     />
                     <DropdownItem 
                       title="Industry 2" 
                       description="Overview of Industry 2." 
-                      to="/industry2" 
+                      to="/industry" 
                       onClick={closeDropdowns} // Close dropdown on click
                     />
                     <DropdownItem 
                       title="Industry 3" 
                       description="Overview of Industry 3." 
-                      to="/industry3" 
+                      to="/industry" 
                       onClick={closeDropdowns} // Close dropdown on click
                     />
                     <DropdownItem 
                       title="Industry 4" 
                       description="Overview of Industry 4." 
-                      to="/industry4" 
+                      to="/industry" 
                       onClick={closeDropdowns} // Close dropdown on click
                     />
                     <DropdownItem 
                       title="More" 
                       description="Explore more industries." 
-                      to="/more-industries" 
+                      to="/industry" 
                       onClick={closeDropdowns} // Close dropdown on click
                     />
                   </div>
