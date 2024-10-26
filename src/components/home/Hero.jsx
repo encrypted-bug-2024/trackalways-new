@@ -5,7 +5,7 @@ const Hero = () => {
     return (
         <section className="relative bg-[#439600] text-white min-h-[90vh] lg:min-h-[90vh] flex flex-col lg:flex-row items-center justify-center mt-24 lg:mt-10 w-11/12 mx-auto rounded-[4%] shadow-lg overflow-hidden">
             {/* Left Section with Text */}
-            <div className="flex-1 flex flex-col justify-center h-full px-4 md:px-20 lg:mt-10">
+            <div className="flex-1 flex flex-col justify-center h-full px-4 md:px-20 md:mt-8 lg:mt-8">
                 {/* New Paragraph Above Heading */}
                 <p className="text-xs sm:text-sm md:text-base text-center lg:text-left max-w-full sm:max-w-md md:max-w-md overflow-hidden whitespace-nowrap text-ellipsis mb-2 md:mb-4 -mt-6 md:mx-auto lg:ml-0">
                     INDIA'S ONE OF THE BEST VEHICLE TRACKING SYSTEM AND APP
@@ -44,7 +44,7 @@ const Hero = () => {
              <img
              src={home}
             alt="Fleet Management"
-            className="max-w-[300px] lg:max-w-[300px] xl:max-w-[500px] h-auto transition-all duration-300 md:-mt-64 md:mb-20 lg:mt-10"
+            className="max-w-[300px] lg:max-w-[300px] xl:max-w-[500px] h-auto transition-all duration-300 md:-mt-52 md:mb-20 lg:mt-20"
           />
           </div>
 

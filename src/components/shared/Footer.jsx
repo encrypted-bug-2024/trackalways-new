@@ -8,12 +8,12 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         
         {/* Left section with logo, input, and social icons */}
-        <div className="flex flex-col items-center md:items-start mb-6 md:mb-14">
+        <div className="flex flex-col items-center md:items-start mb-6 md:mb-14 md:w-1/4"> {/* Adjusted width for desktop layout */}
           <div className="flex items-center">
             <img src={logo} alt="Track Always Logo" className="h-10 mr-2" />
           </div>
           {/* Email Input */}
-          <div className="flex mt-8">
+          <div className="flex mt-4 md:mt-8"> {/* Adjusted margin top */}
             <input 
               type="email" 
               placeholder="Email address" 
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex space-x-8 mt-8">
+          <div className="flex space-x-8 mt-4 md:mt-8"> {/* Adjusted margin top */}
             <a href="https://facebook.com" aria-label="Facebook" className="text-gray-600 hover:text-black">
               <FaFacebookF size={20} />
             </a>
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
-        <div className="text-center md:text-left mb-6 md:mb-0">
+        <div className="text-center md:text-left mb-6 md:mb-0 md:w-1/4"> {/* Adjusted width for desktop layout */}
           <h3 className="text-gray-800 font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
             <li><a href="#" className="text-gray-600 hover:text-black">Home</a></li>
@@ -53,7 +53,7 @@ const Footer = () => {
         </div>
 
         {/* Get in Touch */}
-        <div className="text-center md:text-left">
+        <div className="text-center md:text-left md:w-1/4"> {/* Adjusted width for desktop layout */}
           <h3 className="text-gray-800 font-semibold mb-4">Get In Touch</h3>
           <p className="text-gray-600">Head Office</p>
           <p className="text-gray-600">A-01, Yasoda Garden Bagnugaliya, Bhopal - 462043</p>

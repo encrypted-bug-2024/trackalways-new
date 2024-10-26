@@ -16,7 +16,7 @@ const Explore = () => {
         </h2>
 
         {/* Boxes Container */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 sm:px-0 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 sm:px-0 md:px-8">
           {/* Box 1 */}
           <div className="bg-[#439600] p-8 rounded-lg shadow-md flex flex-col items-start h-full w-full sm:w-full md:w-auto">
             <img

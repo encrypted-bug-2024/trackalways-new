@@ -5,15 +5,16 @@ import search from '../../assets/search.svg';
 const Track = () => {
   return (
     <>
-      <section className="flex flex-col sm:mt-2 sm:mb-2 md:flex-row items-center justify-between w-11/12 mx-auto mt-16 -mb-20 bg-white p-5 rounded-lg min-h-[80vh]">
+      <section className="flex flex-col sm:mt-2 sm:mb-2 items-center justify-between w-11/12 mx-auto mt-16 -mb-20 bg-white p-5 rounded-lg min-h-[80vh] md:flex-row lg:flex-row iPad-styles">
+        
         <div className="flex-2 flex flex-col items-center md:items-start">
           {/* Heading */}
-          <h2 className="font-bold text-2xl md:text-4xl lg:text-6xl mb-12 text-center md:text-left ">
+          <h2 className="font-bold text-2xl md:text-4xl lg:text-6xl mb-6 text-center md:text-left lg:text-left">
             Increase fleet visibility with our vehicle tracking app.
           </h2>
 
-          {/* PNG Image for Mobile */}
-          <div className="flex justify-center md:hidden mb-4">
+          {/* PNG Image for Mobile Only */}
+          <div className="flex justify-center mb-4 mobile-image-only">
             <img
               src={newImage}
               alt="New Fleet Management"
@@ -21,15 +22,24 @@ const Track = () => {
             />
           </div>
 
+          {/* PNG Image for iPad Only */}
+          <div className="flex justify-center mb-4 iPad-image-only">
+            <img
+              src={newImage}
+              alt="New Fleet Management"
+              className="max-w-[300px] h-auto"
+            />
+          </div>
+
           {/* Paragraph */}
-          <p className="text-base md:text-lg mb-8 text-center md:text-left px-4 md:px-0">
+          <p className="text-base md:text-lg mb-6 text-center md:text-left lg:text-left px-4 md:px-0">
             See in near real-time a 360-degree view of your fleet's daily operations,
             helping you reduce costs, increase productivity, and stay on top of vehicle
             maintenance—allowing you to focus on running your business.
           </p>
 
           {/* Button */}
-          <div className="flex justify-center md:justify-start mt-1">
+          <div className="flex justify-center md:justify-start lg:justify-start mt-1">
             <button className="bg-white text-[#439600] border border-[#439600] font-semibold px-8 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 flex items-center justify-center">
               BOOK A DEMO
               <FaArrowRight className="ml-2" />
@@ -38,23 +48,70 @@ const Track = () => {
         </div>
 
         <div className="flex-1 flex justify-center mt-4 md:mt-0 relative">
-          {/* PNG Image for Desktop */}
+          {/* PNG Image for Desktop Only */}
           <img
             src={newImage}
             alt="New Fleet Management"
-            className="max-w-[150px] md:max-w-[300px] lg:max-w-[600px] h-auto hidden md:block"
+            className="hidden md:block lg:block max-w-[150px] md:max-w-[300px] lg:max-w-[600px] h-auto"
           />
 
           {/* SVG Image positioned in the corner (hidden on mobile) */}
           <img
             src={search}
             alt="Logo"
-            className="absolute bottom-4  right-12 md:right-33 max-w-[50px] h-auto hidden md:block"
+            className="absolute bottom-4 right-12 md:right-33 max-w-[50px] h-auto hidden md:block"
           />
         </div>
       </section>
 
+      {/* Custom CSS for screen-specific visibility */}
+      <style jsx>{`
+        /* Hide the iPad and mobile images by default */
+        .iPad-image-only, .mobile-image-only {
+          display: none;
+        }
+
+        /* Mobile View */
+        @media (max-width: 767px) {
+          .mobile-image-only {
+            display: block;
+          }
+        }
+
+        /* iPad View */
+        @media (min-width: 768px) and (max-width: 1024px) {
+          .md\\:flex-row {
+            flex-direction: column;
+          }
+          .md\\:items-start {
+            align-items: center;
+          }
+          .md\\:justify-start {
+            justify-content: center;
+          }
+          .md\\:text-left {
+            text-align: center;
+          }
+          /* Show iPad image only on iPad screens with increased size */
+          .iPad-image-only {
+            display: block;
+            max-width: 400px; /* Adjust to increase the size */
+            height: auto;
+          }
+          /* Hide desktop and mobile images on iPad */
+          .md\\:block, .mobile-image-only {
+            display: none;
+          }
+          /* iPad-specific margin adjustments */
+          .iPad-styles {
+            margin-top: 6rem; /* Equivalent to mt-16 */
+            margin-bottom: -10rem; /* Equivalent to -mb-40 */
+          }
+        }
+        
+      `}</style>
     </>
-  )
-}
+  );
+};
+
 export default Track;
