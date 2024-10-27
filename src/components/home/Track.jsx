@@ -27,7 +27,7 @@ const Track = () => {
             <img
               src={newImage}
               alt="New Fleet Management"
-              className="max-w-[300px] h-auto"
+              className="max-w-[450px] h-auto"
             />
           </div>
 

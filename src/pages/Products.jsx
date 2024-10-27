@@ -65,7 +65,7 @@ const Product = () => {
       </div>
 
       {/* Wrapper Div to add 80px gap on left and right */}
-      <div className="px-20"> {/* Adds 80px padding on left and right */}
+      <div className="px-8 md:px-20"> {/* Adds 80px padding on left and right */}
 
         {/* Heading and Search */}
         <div className="flex justify-between items-center mb-10 mt-24 ">
@@ -94,7 +94,7 @@ const Product = () => {
         </div>
 
         {/* Products */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
           {currentProducts.map(product => (
             <div key={product.id} className="border-2 border-black rounded-2xl shadow-md bg-[#439600] overflow-hidden flex flex-col"> {/* Increased border thickness and color, doubled corner radius */}
               <img

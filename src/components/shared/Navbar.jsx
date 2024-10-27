@@ -216,11 +216,11 @@ const Navbar = () => {
             </button>
             {industriesOpen && (
               <ul className="pl-4">
-                <li><NavLink to="/industry1" onClick={toggleMenu} className="block text-gray-600 hover:text-green-600">Industry 1</NavLink></li>
-                <li><NavLink to="/industry2" onClick={toggleMenu} className="block text-gray-600 hover:text-green-600">Industry 2</NavLink></li>
-                <li><NavLink to="/industry3" onClick={toggleMenu} className="block text-gray-600 hover:text-green-600">Industry 3</NavLink></li>
-                <li><NavLink to="/industry4" onClick={toggleMenu} className="block text-gray-600 hover:text-green-600">Industry 4</NavLink></li>
-                <li><NavLink to="/more-industries" onClick={toggleMenu} className="block text-gray-600 hover:text-green-600">More</NavLink></li>
+                <li><NavLink to="/industry" onClick={toggleMenu} className="block text-gray-600 hover:text-green-600">Industry 1</NavLink></li>
+                <li><NavLink to="/industry" onClick={toggleMenu} className="block text-gray-600 hover:text-green-600">Industry 2</NavLink></li>
+                <li><NavLink to="/industry" onClick={toggleMenu} className="block text-gray-600 hover:text-green-600">Industry 3</NavLink></li>
+                <li><NavLink to="/industry" onClick={toggleMenu} className="block text-gray-600 hover:text-green-600">Industry 4</NavLink></li>
+                <li><NavLink to="/industry" onClick={toggleMenu} className="block text-gray-600 hover:text-green-600">More</NavLink></li>
               </ul>
             )}
           </li>
