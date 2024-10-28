@@ -65,10 +65,10 @@ const Product = () => {
       </div>
 
       {/* Wrapper Div to add 80px gap on left and right */}
-      <div className="px-8 md:px-20"> {/* Adds 80px padding on left and right */}
+      <div className="px-8 md:px-20">
 
         {/* Heading and Search */}
-        <div className="flex justify-between items-center mb-10 mt-24 ">
+        <div className="flex justify-between items-center mb-10 mt-24">
           <h1 className="text-left text-gray-700 text-5xl font-bold">Our products</h1>
         </div>
 
@@ -96,7 +96,7 @@ const Product = () => {
         {/* Products */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
           {currentProducts.map(product => (
-            <div key={product.id} className="border-2 border-black rounded-2xl shadow-md bg-[#439600] overflow-hidden flex flex-col"> {/* Increased border thickness and color, doubled corner radius */}
+            <div key={product.id} className="border-2 border-black rounded-2xl shadow-md bg-[#439600] overflow-hidden flex flex-col mb-4"> {/* Added mb-4 for bottom margin */}
               <img
                 src={product.image}
                 alt={product.name}
@@ -120,27 +120,27 @@ const Product = () => {
         </div>
 
         {/* Pagination */}
-<div className="mt-6 mb-16 flex justify-center">
-  {Array.from({ length: Math.ceil(filteredProducts.length / productsPerPage) }).slice(0, 3).map((_, index) => (
-    <button
-      key={index}
-      onClick={() => paginate(index + 1)}
-      className={`mx-2 px-4 py-2 ${currentPage === index + 1 ? 'bg-[#439600] text-white' : 'bg-[#439600]/50'} rounded-lg`}
-    >
-      {index + 1}
-    </button>
-  ))}
-  
-  {/* Next Button */}
-  {currentPage < Math.ceil(filteredProducts.length / productsPerPage) && (
-    <button
-      onClick={() => paginate(currentPage + 1)}
-      className="mx-2 px-4 py-2 bg-[#439600] text-white rounded-lg"
-    >
-      Next
-    </button>
-  )}
-</div>
+        <div className="mt-6 mb-16 flex justify-center">
+          {Array.from({ length: Math.ceil(filteredProducts.length / productsPerPage) }).slice(0, 3).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => paginate(index + 1)}
+              className={`mx-2 px-4 py-2 ${currentPage === index + 1 ? 'bg-[#439600] text-white' : 'bg-[#439600]/50'} rounded-lg`}
+            >
+              {index + 1}
+            </button>
+          ))}
+          
+          {/* Next Button */}
+          {currentPage < Math.ceil(filteredProducts.length / productsPerPage) && (
+            <button
+              onClick={() => paginate(currentPage + 1)}
+              className="mx-2 px-4 py-2 bg-[#439600] text-white rounded-lg"
+            >
+              Next
+            </button>
+          )}
+        </div>
 
       </div>
     </>

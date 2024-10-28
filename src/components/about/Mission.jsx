@@ -28,7 +28,7 @@ const Mission = () => {
 
         {/* Right Side - About Us Heading and Paragraph */}
         <div className="md:w-1/2 md:pr-4 text-center md:text-left">
-            <h3 className="text-5xl mt-0 md:mt-28 mb-10">Our Mission</h3> {/* Adjusted margin-top for mobile */}
+            <h3 className="text-5xl mt-0 md:mt-18 lg:mt-28 mb-10">Our Mission</h3> {/* Adjusted margin-top for mobile */}
             <p className="text-gray-700 text-lg mb-4">
             At Trackalways, our mission is to revolutionize how businesses manage their assets, enhance operational efficiency, and ensure the safety and security of people and valuable resources. We are driven by a passion for leveraging technology to create solutions that make a tangible impact on our clients' success.
             </p>

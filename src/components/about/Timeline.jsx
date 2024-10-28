@@ -37,9 +37,7 @@ const Timeline = () => {
       <h2 className="text-5xl font-bold text-center mb-20">Our Story</h2>
       <div className="relative">
         {/* Vertical dotted line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-dotted border-black md:top-0 top-1/4 md:h-full">
-          {/* Adjust top positioning based on screen size */}
-        </div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-dotted border-black md:top-0 top-1/4 md:h-full"></div>
 
         {/* Timeline Items */}
         {timelineData.map((item, index) => (
@@ -50,11 +48,12 @@ const Timeline = () => {
             }`}
             style={{ paddingLeft: index % 2 === 0 ? '120px' : '0', paddingRight: index % 2 === 1 ? '120px' : '0' }}
           >
-            <div className="md:w-5/12 flex justify-center md:justify-end">
+            {/* Show image only on lg screens */}
+            <div className="hidden lg:flex md:w-5/12 justify-center md:justify-end">
               <img
                 src={item.image}
                 alt={item.year}
-                className="w-full md:w-[400px] rounded-md"
+                className="w-full lg:w-[400px] rounded-md"
                 style={{ marginRight: index % 2 === 0 ? '180px' : '0' }} // Adjust margin to shift images right
               />
             </div>
@@ -70,9 +69,9 @@ const Timeline = () => {
         {timelineData.map((_, index) => (
           <div
             key={index}
-            className="absolute h-10 w-10 flex items-center justify-center bg-black border-4 border-white text-white text-xl font-bold rounded-full left-1/2 transform -translate-x-1/2"
+            className="hidden lg:flex absolute h-10 w-10 items-center justify-center bg-black border-4 border-white text-white text-xl font-bold rounded-full left-1/2 transform -translate-x-1/2"
             style={{
-              top: `${index * 420}px`, // Set the first circle at the top and space them 150px apart
+              top: `${index * 450}px`, // Set the first circle at the top and space them 420px apart
             }}
           >
             {index + 1}

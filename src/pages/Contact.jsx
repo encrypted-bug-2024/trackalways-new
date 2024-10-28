@@ -1,5 +1,4 @@
 import banner from '../assets/contact-banner.png';
-import mapImage from '../assets/map.png';
 
 const Contact = () => {
   return (
@@ -111,14 +110,38 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Map Image Section */}
-      <div className="mt-20 mb-20 flex justify-center">
-        <img
-          src={mapImage}
-          alt="Map"
-          className="w-full h-auto max-w-[1200px] rounded-lg"
-        />
-      </div>
+      {/* Google Map Section */}
+     {/* Google Map Section */}
+{/* Google Map Section */}
+<div className="mt-20 mb-10 flex justify-center px-4 md:px-8 lg:px-16">
+  <div className="w-full max-w-8xl">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.8829423400053!2d-73.99445948459417!3d40.753532779327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af2382ef03%3A0x7d8f06b248c69d04!2s315%20W%2036th%20St%2C%20New%20York%2C%20NY%2010018%2C%20USA!5e0!3m2!1sen!2sus!4v1698600606315!5m2!1sen!2sus"
+      width="100%"
+      height="450"
+      className="rounded-lg shadow-lg"
+      allowFullScreen=""
+      loading="lazy"
+      title="Google Map"
+    ></iframe>
+  </div>
+</div>
+
+{/* Contact Information Section */}
+<div className="bg-white mt-16 mb-16 shadow-md p-8 rounded-lg max-w-xs sm:max-w-md mx-auto text-center border border-gray-300 px-4 sm:px-16">
+  <h4 className="text-2xl font-semibold mb-2">Talk with us</h4>
+  <p className="text-gray-600">
+    83, Easton Street High Wycombe HP111LT, UNITED KINGDOM
+  </p>
+  <a href="tel:+447458671438" className="text-blue-500 text-lg font-semibold mt-2 block">
+    +44 7458 671438
+  </a>
+</div>
+
+
+
+
+
     </>
   );
 };

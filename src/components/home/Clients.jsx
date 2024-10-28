@@ -7,8 +7,8 @@ import ashok from '../../assets/ashok.png';
 
 const Clients = () => {
   const clientLogos = [
-    { src: tata, alt: 'Tata', width: 'w-24  md:w-48 lg:w-56' },
-    { src: jio, alt: 'Jio', width: 'w-24 md:w-40 lg:w-48' },
+    { src: tata, alt: 'Tata', width: 'w-24 md:w-48 lg:w-56' },
+    { src: jio, alt: 'Jio', width: 'w-24 md:w-40 lg:w-52' },
     { src: bansal, alt: 'Bansal', width: 'w-24 md:w-48 lg:w-56' },
     { src: skoda, alt: 'Skoda', width: 'w-24 md:w-40 md:h-44 lg:w-48' },
   ];
@@ -23,12 +23,18 @@ const Clients = () => {
         <ul className="flex animate-marquee whitespace-nowrap items-center">
           {clientLogos.map((logo, index) => (
             <li key={index} className="flex-shrink-0 mx-6">
-              <img className={`h-24 w-24 md:h-40 md:w-40  lg:h-48 ${logo.width}`} src={logo.src} alt={logo.alt} />
+              <img className={`h-24 w-24 md:h-40 md:w-40 lg:h-48 ${logo.width}`} src={logo.src} alt={logo.alt} />
             </li>
           ))}
-          {/* Duplicate the list for continuous flow */}
+          {/* First duplicate */}
           {clientLogos.map((logo, index) => (
-            <li key={`duplicate-${index}`} className="flex-shrink-0 mx-6">
+            <li key={`duplicate-1-${index}`} className="flex-shrink-0 mx-6">
+              <img className={`h-24 w-24 md:h-40 lg:h-48 ${logo.width}`} src={logo.src} alt={logo.alt} />
+            </li>
+          ))}
+          {/* Second duplicate */}
+          {clientLogos.map((logo, index) => (
+            <li key={`duplicate-2-${index}`} className="flex-shrink-0 mx-6">
               <img className={`h-24 w-24 md:h-40 lg:h-48 ${logo.width}`} src={logo.src} alt={logo.alt} />
             </li>
           ))}
