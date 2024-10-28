@@ -26,7 +26,7 @@ const Media = () => {
 </div>
 
 {/* Main Content Section */}
-<div className="p-4 mt-14 max-w-7xl mx-auto space-y-8">
+<div className="p-0 mt-14 max-w-7xl mx-auto space-y-8">
 
   {/* Top Section: Large News Coverage */}
   <div className="bg-white mb-24 shadow-lg rounded-lg overflow-hidden">

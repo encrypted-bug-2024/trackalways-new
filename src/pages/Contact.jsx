@@ -1,5 +1,5 @@
 import banner from '../assets/contact-banner.png';
-import mapImage from '../assets/map.png'; // Adjust the path as necessary
+import mapImage from '../assets/map.png';
 
 const Contact = () => {
   return (
@@ -32,7 +32,6 @@ const Contact = () => {
         <div className="flex flex-col md:flex-row justify-between">
           {/* Left Side - Headings and Paragraph */}
           <div className="text-gray-300 md:w-1/2">
-            {/* Hide "Contact Us" heading on mobile */}
             <h3 className="hidden md:block text-9xl mb-4">Contact Us</h3>
             <h4 className="text-white text-4xl md:text-6xl mb-4">Talk to the team, we are here to help!</h4>
             <p className="text-white text-sm md:text-base mb-4">
@@ -44,7 +43,8 @@ const Contact = () => {
           {/* Right Side - Form */}
           <div className="md:w-1/2">
             <form className="bg-black p-6 rounded shadow-lg">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Grid configuration updated for mobile stacking */}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2">
                 <div>
                   <label htmlFor="first-name" className="text-white block mb-1 font-medium text-sm md:text-base">First Name</label>
                   <input
@@ -81,7 +81,7 @@ const Contact = () => {
                     placeholder="+1 012 3456 789"
                   />
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-1 md:col-span-2">
                   <label htmlFor="subject" className="text-white block mb-1 font-medium text-sm md:text-base">Subject</label>
                   <input
                     type="text"
@@ -90,7 +90,7 @@ const Contact = () => {
                     placeholder="Subject"
                   />
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-1 md:col-span-2">
                   <label htmlFor="message" className="text-white block mb-1 font-medium text-sm md:text-base">Message</label>
                   <textarea
                     id="message"

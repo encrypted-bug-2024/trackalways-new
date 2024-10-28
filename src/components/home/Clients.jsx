@@ -8,9 +8,9 @@ import ashok from '../../assets/ashok.png';
 const Clients = () => {
   const clientLogos = [
     { src: tata, alt: 'Tata', width: 'w-24  md:w-48 lg:w-56' },
-    { src: jio, alt: 'Jio', width: 'w-24 md:w-48 lg:w-56' },
+    { src: jio, alt: 'Jio', width: 'w-24 md:w-40 lg:w-48' },
     { src: bansal, alt: 'Bansal', width: 'w-24 md:w-48 lg:w-56' },
-    { src: skoda, alt: 'Skoda', width: 'w-24 md:w-48 md:h-44 lg:w-56' },
+    { src: skoda, alt: 'Skoda', width: 'w-24 md:w-40 md:h-44 lg:w-48' },
   ];
 
   return (
