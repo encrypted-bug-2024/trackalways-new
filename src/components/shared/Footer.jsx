@@ -66,7 +66,7 @@ const Footer = () => {
         {/* Quick Links and Get in Touch sections */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full md:w-auto mb-6 md:mb-0 md:flex-grow">
           {/* Quick Links */}
-          <div className="text-center md:text-left lg:ml-36">
+          <div className="text-center md:text-center md:mr-32 lg:mr-0 lg:text-left lg:ml-36">
             <h3 className="text-gray-800 font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -88,7 +88,7 @@ const Footer = () => {
           </div>
 
           {/* Get in Touch */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-center lg:text-left">
             <h3 className="text-gray-800 font-semibold mb-4">Get In Touch</h3>
             <p className="text-gray-600">Head Office</p>
             <p className="text-gray-600">A-01, Yasoda Garden Bagnugaliya, Bhopal - 462043</p>
