@@ -1,22 +1,59 @@
+import { useEffect, useRef, useState } from 'react';
 import analyze from '../../assets/analyze.avif';
 import { FaArrowRight } from 'react-icons/fa';
 
-const Analyzse = () => {
+const Analyze = () => {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false); // Reset animation when out of view for next scroll
+        }
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of the section is visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
-      <section className="flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto mt-8 md:mt-48 bg-white p-5 rounded-lg min-h-[70vh] gap-x-8">
-  
+      <section
+        ref={sectionRef}
+        className={`flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto mt-8 md:mt-48 bg-white p-5 rounded-lg min-h-[70vh] gap-x-8 ${
+          isVisible ? 'animate-section' : ''
+        }`}
+      >
         {/* Left Side: PNG Image */}
-        <div className="flex-1 flex justify-center mt-4 md:mt-0 relative">
+        <div className={`flex-1 flex justify-center mt-4 md:mt-0 relative ${
+          isVisible ? 'animate-left-image' : 'hidden-content'
+        }`}>
           <img
-            src={analyze}  // Replace with your image path
+            src={analyze} // Replace with your image path
             alt="New Fleet Management"
             className="max-w-[320px] mb-4 md:max-w-[500px] lg:max-w-[500px] h-auto sm:h-auto" // Increase width for iPad Mini
           />
         </div>
 
         {/* Right Side: Text and Buttons */}
-        <div className="flex-2 flex flex-col items-center md:items-start">
+        <div className={`flex-2 flex flex-col items-center md:items-start ${
+          isVisible ? 'animate-right-content' : 'hidden-content'
+        }`}>
           {/* Heading */}
           <h2 className="font-bold text-2xl md:text-4xl lg:text-6xl mb-8 text-center md:text-left line-clamp-3">
             Analyse your fleet's performance over time
@@ -24,7 +61,7 @@ const Analyzse = () => {
 
           {/* Paragraph */}
           <p className="text-base md:text-lg mb-8 text-center md:text-left px-4 md:px-0">
-            See important trends by team, department or across the entire fleet. Our customisable dashboards make it easy to review your progress towards KPIs or budgets, with up-to-the-minute fleet analytics when you need them most.
+            See important trends by team, department or across the entire fleet. Our customizable dashboards make it easy to review your progress towards KPIs or budgets, with up-to-the-minute fleet analytics when you need them most.
           </p>
 
           {/* Button */}
@@ -36,8 +73,57 @@ const Analyzse = () => {
           </div>
         </div>
       </section>
+
+      {/* Custom CSS for animations */}
+      <style jsx>{`
+        /* Hide content initially */
+        .hidden-content {
+          opacity: 0;
+          transform: translateX(0);
+        }
+
+        /* Desktop Animations */
+        @media (min-width: 1024px) {
+          .animate-section {
+            overflow: hidden;
+          }
+          .animate-left-image {
+            animation: slideInLeft 0.6s ease-out forwards;
+            transform: translateX(-100%);
+            opacity: 1;
+          }
+          .animate-right-content {
+            animation: slideInRight 0.6s ease-out forwards;
+            transform: translateX(100%);
+            opacity: 1;
+          }
+        }
+
+        /* Keyframes */
+        @keyframes slideInLeft {
+          0% {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        @keyframes slideInRight {
+          0% {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+      `}</style>
     </>
   );
-}
+};
 
-export default Analyzse;
+export default Analyze;

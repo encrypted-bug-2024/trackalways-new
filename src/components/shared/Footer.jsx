@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
   return (
@@ -157,10 +158,32 @@ const Footer = () => {
       {/* Line above the copyright */}
       <div className="mt-8 border-t border-gray-300"></div>
 
-      {/* Footer bottom */}
-      <div className="mt-4 text-center text-gray-500 text-sm">
-        <p>&copy; 2024 Track Always, Inc. All Rights Reserved.</p>
+      <div className="flex flex-col md:flex-row items-center justify-between mx-auto px-4 py-4 text-gray-500">
+      
+      {/* Left Links Section */}
+      <div className="grid grid-cols-1 gap-2 text-center md:flex md:space-x-0 md:text-left mb-4 md:mb-4 lg:mb-0">
+        <HashLink to="#" className="hover:text-green-600 md:after:content-['|'] md:after:mx-2 last:after:content-['']">
+          Privacy Policy
+        </HashLink>
+        <HashLink to="#" className="hover:text-green-600 md:after:content-['|'] md:after:mx-2 last:after:content-['']">
+          Terms & Conditions
+        </HashLink>
+        <HashLink to="#" className="hover:text-green-600 md:after:content-['|'] md:after:mx-2 last:after:content-['']">
+          RRC Policies
+        </HashLink>
+        <HashLink to="#" className="hover:text-green-600">
+          Shipping Policies
+        </HashLink>
       </div>
+
+      {/* Right Copyright Section */}
+      <div className="text-center md:text-right text-sm font-semibold">
+        &copy; {new Date().getFullYear()}{" "}
+        <HashLink to="#" className="hover:text-green-600">
+          Track Always
+        </HashLink>, Inc. All rights reserved.
+      </div>
+    </div>
     </footer>
   );
 };
