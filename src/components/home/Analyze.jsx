@@ -35,7 +35,7 @@ const Analyze = () => {
     <>
       <section
         ref={sectionRef}
-        className={`flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto mt-8 md:mt-48 bg-white p-5 rounded-lg min-h-[70vh] gap-x-8 ${
+        className={`flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto bg-white p-5 rounded-lg my-10 lg:my-28 gap-x-8 ${
           isVisible ? 'animate-section' : ''
         }`}
       >

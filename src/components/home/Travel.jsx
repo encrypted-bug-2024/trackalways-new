@@ -30,7 +30,7 @@ const Travel = () => {
 
   return (
     <>
-      <section className="flex flex-col md:flex-row items-center justify-between w-11/12 md:-mb-40 lg:-mb-60 sm:-mt-10 mx-auto mt-8 bg-white p-5 rounded-lg min-h-[80vh] gap-x-8"> 
+      <section className="flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto bg-white p-5 rounded-lg gap-x-8 my-10 lg:my-28"> 
         <div className="flex-2 flex flex-col items-center md:items-start">
           <h2 className="font-bold text-2xl md:text-4xl lg:text-6xl mb-8 text-center md:text-left line-clamp-3">
             The most intuitive Fleet & Asset tracking system on the market.

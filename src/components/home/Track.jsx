@@ -36,9 +36,7 @@ const Track = () => {
     <>
       <section
         ref={sectionRef}
-        className={`flex flex-col sm:mt-2 sm:mb-2 items-center justify-between w-11/12 mx-auto mt-16 -mb-20 bg-white p-5 rounded-lg min-h-[80vh] md:flex-row lg:flex-row iPad-styles ${
-          isVisible ? 'animate-section' : ''
-        }`}
+        className={`flex flex-col my-10 md:my-20 items-center justify-between w-11/12 mx-auto bg-white p-5 rounded-lg md:flex-row lg:flex-row`}
       >
         <div
           className={`flex-2 flex flex-col items-center md:items-start ${

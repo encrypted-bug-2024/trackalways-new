@@ -2,7 +2,7 @@ import React from 'react';
 
 const Scale = () => {
   return (
-    <section className="bg-[#439600] text-white w-full py-10">
+    <section className="bg-[#439600] text-white w-full py-10 my-10 md:my-20">
       <div className="w-11/12 mx-auto grid grid-cols-5 grid-rows-1 gap-4">
         {/* Left Arrows */}
         <div className="flex items-center justify-center">
