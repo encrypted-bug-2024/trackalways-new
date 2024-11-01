@@ -110,19 +110,17 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Google Map Section */}
-     {/* Google Map Section */}
 {/* Google Map Section */}
 <div className="mt-20 mb-10 flex justify-center px-4 md:px-8 lg:px-16">
   <div className="w-full max-w-8xl">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.8829423400053!2d-73.99445948459417!3d40.753532779327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af2382ef03%3A0x7d8f06b248c69d04!2s315%20W%2036th%20St%2C%20New%20York%2C%20NY%2010018%2C%20USA!5e0!3m2!1sen!2sus!4v1698600606315!5m2!1sen!2sus"
+  <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1768.7891292217724!2d77.434936!3d23.259795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c426d6b3a23d7%3A0x7d7b4e2c8d8ec0d8!2sA-01%2C%20Yasoda%20Garden%20Bagnugaliya%2C%20Bhopal%20-%20462043!5e0!3m2!1sen!2sin!4v1698600606315"
       width="100%"
       height="450"
-      className="rounded-lg shadow-lg"
+      className="rounded-lg shadow-lg mb-8"
       allowFullScreen=""
       loading="lazy"
-      title="Google Map"
+      title="Head Office Location - Yasoda Garden"
     ></iframe>
   </div>
 </div>

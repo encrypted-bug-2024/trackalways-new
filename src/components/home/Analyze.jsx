@@ -11,8 +11,7 @@ const Analyze = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-        } else {
-          setIsVisible(false); // Reset animation when out of view for next scroll
+          observer.unobserve(entry.target); // Stop observing once animated
         }
       },
       {

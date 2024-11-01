@@ -22,7 +22,7 @@ const Explore = () => {
             <img
               src={box1}
               alt="Box 1 Image"
-              className="w-10 h-10 mb-4"
+              className="w-12 h-10 mb-4"
             />
             <h3 className="text-white font-bold text-lg mb-2">Track Your Fleet</h3>
             <p className="text-white text-left">
@@ -35,7 +35,7 @@ const Explore = () => {
             <img
               src={box2}
               alt="Box 2 Image"
-              className="w-10 h-10 mb-4"
+              className="w-12 h-12 mb-4"
             />
             <h3 className="font-bold text-lg mb-2">Remote Immobilisation</h3>
             <p className="text-gray-700 text-left">
@@ -48,7 +48,7 @@ const Explore = () => {
             <img
               src={box3}
               alt="Box 3 Image"
-              className="w-10 h-10 mb-4"
+              className="w-12 h-10 mb-4"
             />
             <h3 className="font-bold text-lg mb-2">Driver Privacy Switches</h3>
             <p className="text-gray-700 text-left">
@@ -61,7 +61,7 @@ const Explore = () => {
             <img
               src={box4}
               alt="Box 4 Image"
-              className="w-10 h-10 mb-4"
+              className="w-12 h-14 mb-4"
             />
             <h3 className="font-bold text-lg mb-2">Driver Identification Fobs</h3>
             <p className="text-gray-700 text-left">
@@ -74,7 +74,7 @@ const Explore = () => {
             <img
               src={box5}
               alt="Box 5 Image"
-              className="w-10 h-10 mb-4"
+              className="w-12 h-10 mb-4"
             />
             <h3 className="font-bold text-lg mb-2">Road Speed Data</h3>
             <p className="text-gray-700 text-left">
@@ -87,7 +87,7 @@ const Explore = () => {
             <img
               src={box6}
               alt="Box 6 Image"
-              className="w-10 h-10 mb-4"
+              className="w-12 h-10 mb-4"
             />
             <h3 className="font-bold text-lg mb-2">Public API for integration</h3>
             <p className="text-gray-700 text-left">

@@ -11,14 +11,12 @@ const Card = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && !entry.target.classList.contains('animate-slide-in')) {
             entry.target.classList.add('animate-slide-in');
-          } else {
-            entry.target.classList.remove('animate-slide-in');
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 } // Trigger animation when 10% of the card is visible
     );
 
     cardRefs.current.forEach((ref) => {
@@ -30,10 +28,11 @@ const Card = () => {
 
   return (
     <section className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 md:gap-12 lg:gap-8 w-11/12 my-20 md:my-28 lg:my-20">
-      {[{ logo: logo1, title: 'Track Your Fleet', text: 'Live tracking is available, every 60 seconds, 24 hours a day from any global location on any desktop or mobile device with our fleet tracker GPS solutions.' },
-      { logo: logo2, title: 'Access Reports Easily', text: 'Fleetsmart provides a comprehensive report suite delivering information on a multitude of fleet management information.' },
-      { logo: logo3, title: 'Lower Costs', text: 'Utilize your fleet more efficiently, route optimally, reduce unauthorized usage, reduce excess idling and save money.' },
-      { logo: logo4, title: 'Increase Profits', text: 'Produce accurate time sheets, eliminate false overtime claims, save 10-15% on annual fuel spend.' }
+      {[
+        { logo: logo1, title: 'Track Your Fleet', text: 'Live tracking is available, every 60 seconds, 24 hours a day from any global location on any desktop or mobile device with our fleet tracker GPS solutions.' },
+        { logo: logo2, title: 'Access Reports Easily', text: 'Fleetsmart provides a comprehensive report suite delivering information on a multitude of fleet management information.' },
+        { logo: logo3, title: 'Lower Costs', text: 'Utilize your fleet more efficiently, route optimally, reduce unauthorized usage, reduce excess idling and save money.' },
+        { logo: logo4, title: 'Increase Profits', text: 'Produce accurate time sheets, eliminate false overtime claims, save 10-15% on annual fuel spend.' }
       ].map((card, index) => (
         <div
           key={index}
@@ -49,7 +48,6 @@ const Card = () => {
           </div>
         </div>
       ))}
-      {/* Custom CSS for screen-specific visibility */}
       <style jsx>{`
         .animate-slide-in {
           opacity: 1;
@@ -57,7 +55,6 @@ const Card = () => {
           transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        /* Only apply animation on large screens */
         @media (min-width: 1024px) {
           .card-animation {
             transition: opacity 0.6s ease, transform 0.6s ease;

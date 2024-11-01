@@ -11,8 +11,7 @@ const Travel = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate'); // Add animation class
-          } else {
-            entry.target.classList.remove('animate'); // Remove animation class when out of view
+            observer.unobserve(entry.target); // Stop observing after animation triggers once
           }
         });
       },

@@ -5,15 +5,13 @@ import search from '../../assets/search.svg';
 
 const Track = () => {
   const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false); // Reset animation when out of view for next scroll
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true); // Only set once when first intersecting
         }
       },
       {
@@ -30,25 +28,23 @@ const Track = () => {
         observer.unobserve(sectionRef.current);
       }
     };
-  }, []);
+  }, [hasAnimated]);
 
   return (
     <>
       <section
         ref={sectionRef}
-        className={`flex flex-col my-10 md:my-20 items-center justify-between w-11/12 mx-auto bg-white p-5 rounded-lg md:flex-row lg:flex-row`}
+        className="flex flex-col my-10 md:my-20 items-center justify-between w-11/12 mx-auto bg-white p-5 rounded-lg md:flex-row lg:flex-row"
       >
         <div
           className={`flex-2 flex flex-col items-center md:items-start ${
-            isVisible ? 'animate-left-content' : 'hidden-content'
+            hasAnimated ? 'animate-left-content' : 'hidden-content'
           }`}
         >
-          {/* Heading */}
           <h2 className="font-bold text-2xl md:text-4xl lg:text-6xl mb-6 text-center md:text-left lg:text-left">
             Increase fleet visibility with our vehicle tracking app.
           </h2>
 
-          {/* PNG Image for Mobile Only */}
           <div className="flex justify-center mb-4 mobile-image-only">
             <img
               src={newImage}
@@ -57,7 +53,6 @@ const Track = () => {
             />
           </div>
 
-          {/* PNG Image for iPad Only */}
           <div className="flex justify-center mb-4 iPad-image-only">
             <img
               src={newImage}
@@ -66,14 +61,12 @@ const Track = () => {
             />
           </div>
 
-          {/* Paragraph */}
           <p className="text-base md:text-lg mb-6 text-center md:text-left lg:text-left px-4 md:px-0">
             See in near real-time a 360-degree view of your fleet's daily operations,
             helping you reduce costs, increase productivity, and stay on top of vehicle
             maintenance—allowing you to focus on running your business.
           </p>
 
-          {/* Button */}
           <div className="flex justify-center md:justify-start lg:justify-start mt-1">
             <button className="bg-white text-[#439600] border border-[#439600] font-semibold px-8 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 flex items-center justify-center">
               BOOK A DEMO
@@ -84,17 +77,15 @@ const Track = () => {
 
         <div
           className={`flex-1 flex justify-center mt-4 md:mt-0 relative ${
-            isVisible ? 'animate-right-content' : 'hidden-content'
+            hasAnimated ? 'animate-right-content' : 'hidden-content'
           }`}
         >
-          {/* PNG Image for Desktop Only */}
           <img
             src={newImage}
             alt="New Fleet Management"
             className="hidden md:block lg:block max-w-[150px] md:max-w-[300px] lg:max-w-[600px] h-auto"
           />
 
-          {/* SVG Image positioned in the corner (hidden on mobile) */}
           <img
             src={search}
             alt="Logo"
@@ -103,62 +94,34 @@ const Track = () => {
         </div>
       </section>
 
-      {/* Custom CSS for screen-specific visibility and animations */}
       <style jsx>{`
-        /* Hide the iPad and mobile images by default */
         .iPad-image-only, .mobile-image-only {
           display: none;
         }
 
-        /* Mobile View */
         @media (max-width: 767px) {
           .mobile-image-only {
             display: block;
           }
         }
 
-        /* iPad View */
         @media (min-width: 768px) and (max-width: 1024px) {
-          .md\\:flex-row {
-            flex-direction: column;
-          }
-          .md\\:items-start {
-            align-items: center;
-          }
-          .md\\:justify-start {
-            justify-content: center;
-          }
-          .md\\:text-left {
-            text-align: center;
-          }
-          /* Show iPad image only on iPad screens with increased size */
           .iPad-image-only {
             display: block;
             max-width: 400px;
             height: auto;
           }
-          /* Hide desktop and mobile images on iPad */
           .md\\:block, .mobile-image-only {
             display: none;
           }
-          /* iPad-specific margin adjustments */
-          .iPad-styles {
-            margin-top: 6rem;
-            margin-bottom: -10rem;
-          }
         }
 
-        /* Hide content initially */
         .hidden-content {
           opacity: 0;
           transform: translateX(0);
         }
 
-        /* Desktop Animations */
         @media (min-width: 1024px) {
-          .animate-section {
-            overflow: hidden;
-          }
           .animate-left-content {
             animation: slideInLeft 0.6s ease-out forwards;
             transform: translateX(-100%);
@@ -171,7 +134,6 @@ const Track = () => {
           }
         }
 
-        /* Keyframes */
         @keyframes slideInLeft {
           0% {
             transform: translateX(-100%);
