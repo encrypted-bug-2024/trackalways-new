@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import newImage from '../../assets/product.webp';
 import search from '../../assets/search.svg';
+import { Link } from 'react-router-dom';
 
 const Track = () => {
   const sectionRef = useRef(null);
@@ -68,10 +69,12 @@ const Track = () => {
           </p>
 
           <div className="flex justify-center md:justify-start lg:justify-start mt-1">
+            <Link to='/contact-us'>
             <button className="bg-white text-[#439600] border border-[#439600] font-semibold px-8 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 flex items-center justify-center">
               BOOK A DEMO
               <FaArrowRight className="ml-2" />
             </button>
+            </Link>
           </div>
         </div>
 

@@ -10,11 +10,11 @@ export default {
         // Create a smooth transition from right to left
         marquee: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-100%)' }, // Move left by 100%
+          '70%': { transform: 'translateX(-70%)' }, // Move left by 100%
         },
       },
       animation: {
-        marquee: 'marquee 20s linear infinite', // Adjust animation duration as needed
+        marquee: 'marquee 15s linear infinite', // Adjust animation duration as needed
       },
     },
   },

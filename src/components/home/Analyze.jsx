@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import analyze from '../../assets/analyze.avif';
 import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Analyze = () => {
   const sectionRef = useRef(null);
@@ -65,10 +66,12 @@ const Analyze = () => {
 
           {/* Button */}
           <div className="flex justify-center md:justify-start mt-1">
+            <Link to='/contact-us'>
             <button className="bg-white text-[#439600] border border-[#439600] font-semibold px-8 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 flex items-center justify-center">
               GET STARTED
               <FaArrowRight className="ml-2" />
             </button>
+            </Link>
           </div>
         </div>
       </section>
