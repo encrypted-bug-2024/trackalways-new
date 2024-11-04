@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo2.png";
 import store from "../../assets/store.jpg";
 import { FaAngleDown, FaAngleRight, FaArrowRight, FaBars, FaTimes } from "react-icons/fa";
 
@@ -73,7 +73,7 @@ const Navbar = () => {
       >
         <div className="flex items-center">
           <NavLink to="/">
-            <img src={logo} alt="Logo" className="h-10" />
+            <img src={logo} alt="Logo" className="h-8" />
           </NavLink>
         </div>
 

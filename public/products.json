@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Smart GPS Tracker",
-    "image": "https://static.thenounproject.com/png/5851100-200.png",
+    "name": "OBD Tracker",
+    "image": "/products/product1.png",
     "description": "Stay connected with our Smart GPS Tracker. Ideal for personal use or tracking pets.",
     "price": 29.99,
     "reviews": 105,
@@ -10,8 +10,8 @@
   },
   {
     "id": 2,
-    "name": "Wireless Headphones",
-    "image": "https://static.vecteezy.com/system/resources/thumbnails/017/054/078/small/headphones-design-3d-rendering-for-product-mockup-free-png.png",
+    "name": "Vehicle 4G Tracker",
+    "image": "/products/product2.png",
     "description": "Experience the freedom of wireless music with our sleek headphones.",
     "price": 49.99,
     "reviews": 210,
@@ -19,8 +19,8 @@
   },
   {
     "id": 3,
-    "name": "Fitness Smartwatch",
-    "image": "https://wlius.com/wp-content/uploads/2024/09/Screenshot-2024-09-05-at-14.07.06-300x268.png",
+    "name": "Vehicle Tracker Lite",
+    "image": "/products/product3.png",
     "description": "Track your fitness goals and health metrics with our innovative smartwatch.",
     "price": 199.99,
     "reviews": 85,
@@ -28,8 +28,8 @@
   },
   {
     "id": 4,
-    "name": "Portable Charger",
-    "image": "https://png.pngtree.com/png-vector/20230407/ourmid/pngtree-tracking-line-icon-vector-png-image_6692888.png",
+    "name": "Wireless Tracker 6000",
+    "image": "/products/product4.png",
     "description": "Never run out of battery again with our high-capacity portable charger.",
     "price": 25.99,
     "reviews": 150,
@@ -37,107 +37,107 @@
   },
   {
     "id": 5,
-    "name": "Smart Thermostat",
-    "image": "https://static.thenounproject.com/png/1234567-200.png",
-    "description": "Control your home temperature from anywhere with our smart thermostat.",
-    "price": 149.99,
-    "reviews": 75,
-    "shortDescription": "Smart control for your home."
-  },
-  {
-    "id": 6,
-    "name": "Bluetooth Speaker",
-    "image": "https://static.thenounproject.com/png/2345678-200.png",
+    "name": "Wireless Tracker 10000",
+    "image": "/products/product5.png",
     "description": "Enjoy high-quality sound on the go with our portable Bluetooth speaker.",
     "price": 59.99,
     "reviews": 120,
     "shortDescription": "Crystal clear sound with deep bass."
   },
   {
+    "id": 6,
+    "name": "OBD Tracker",
+    "image": "/products/product1.png",
+    "description": "Stay connected with our Smart GPS Tracker. Ideal for personal use or tracking pets.",
+    "price": 29.99,
+    "reviews": 105,
+    "shortDescription": "A reliable GPS tracker for your needs."
+  },
+  {
     "id": 7,
-    "name": "Smart Security Camera",
-    "image": "https://static.thenounproject.com/png/3456789-200.png",
-    "description": "Keep your home safe with our smart security camera featuring night vision.",
-    "price": 89.99,
-    "reviews": 300,
-    "shortDescription": "Peace of mind for your family."
+    "name": "Vehicle 4G Tracker",
+    "image": "/products/product2.png",
+    "description": "Experience the freedom of wireless music with our sleek headphones.",
+    "price": 49.99,
+    "reviews": 210,
+    "shortDescription": "Noise-cancelling wireless headphones."
   },
   {
     "id": 8,
-    "name": "Electric Toothbrush",
-    "image": "https://static.thenounproject.com/png/4567890-200.png",
-    "description": "Achieve a cleaner, whiter smile with our advanced electric toothbrush.",
-    "price": 49.99,
-    "reviews": 200,
-    "shortDescription": "Professional cleaning at home."
+    "name": "Vehicle Tracker Lite",
+    "image": "/products/product3.png",
+    "description": "Track your fitness goals and health metrics with our innovative smartwatch.",
+    "price": 199.99,
+    "reviews": 85,
+    "shortDescription": "Your perfect fitness companion."
   },
   {
     "id": 9,
-    "name": "Smart Light Bulb",
-    "image": "https://static.thenounproject.com/png/5678901-200.png",
-    "description": "Control your lighting from your smartphone with our smart light bulb.",
-    "price": 19.99,
-    "reviews": 90,
-    "shortDescription": "Customize your home lighting."
+    "name": "Wireless Tracker 6000",
+    "image": "/products/product4.png",
+    "description": "Never run out of battery again with our high-capacity portable charger.",
+    "price": 25.99,
+    "reviews": 150,
+    "shortDescription": "Fast charging and compact design."
   },
   {
     "id": 10,
-    "name": "Noise Cancelling Earbuds",
-    "image": "https://static.thenounproject.com/png/6789012-200.png",
-    "description": "Immerse yourself in music without distractions with our earbuds.",
-    "price": 79.99,
-    "reviews": 180,
-    "shortDescription": "Perfect for music lovers on the go."
+    "name": "Wireless Tracker 10000",
+    "image": "/products/product5.png",
+    "description": "Enjoy high-quality sound on the go with our portable Bluetooth speaker.",
+    "price": 59.99,
+    "reviews": 120,
+    "shortDescription": "Crystal clear sound with deep bass."
   },
   {
     "id": 11,
-    "name": "Smart Coffee Maker",
-    "image": "https://static.thenounproject.com/png/7890123-200.png",
-    "description": "Brew coffee from your phone with our smart coffee maker.",
-    "price": 129.99,
-    "reviews": 65,
-    "shortDescription": "Smart brewing at your fingertips."
+    "name": "OBD Tracker",
+    "image": "/products/product1.png",
+    "description": "Stay connected with our Smart GPS Tracker. Ideal for personal use or tracking pets.",
+    "price": 29.99,
+    "reviews": 105,
+    "shortDescription": "A reliable GPS tracker for your needs."
   },
   {
     "id": 12,
-    "name": "Virtual Reality Headset",
-    "image": "https://static.thenounproject.com/png/8901234-200.png",
-    "description": "Step into a new world with our immersive VR headset.",
-    "price": 299.99,
-    "reviews": 50,
-    "shortDescription": "Experience gaming like never before."
+    "name": "Vehicle 4G Tracker",
+    "image": "/products/product2.png",
+    "description": "Experience the freedom of wireless music with our sleek headphones.",
+    "price": 49.99,
+    "reviews": 210,
+    "shortDescription": "Noise-cancelling wireless headphones."
   },
   {
     "id": 13,
-    "name": "Smart Door Lock",
-    "image": "https://static.thenounproject.com/png/9012345-200.png",
-    "description": "Secure your home with our smart door lock that you can control remotely.",
+    "name": "Vehicle Tracker Lite",
+    "image": "/products/product3.png",
+    "description": "Track your fitness goals and health metrics with our innovative smartwatch.",
     "price": 199.99,
-    "reviews": 110,
-    "shortDescription": "Keyless entry for convenience."
+    "reviews": 85,
+    "shortDescription": "Your perfect fitness companion."
   },
   {
     "id": 14,
-    "name": "Action Camera",
-    "image": "https://static.thenounproject.com/png/1234568-200.png",
-    "description": "Capture your adventures with our high-quality action camera.",
-    "price": 149.99,
+    "name": "Wireless Tracker 6000",
+    "image": "/products/product4.png",
+    "description": "Never run out of battery again with our high-capacity portable charger.",
+    "price": 25.99,
     "reviews": 150,
-    "shortDescription": "Perfect for action-packed moments."
+    "shortDescription": "Fast charging and compact design."
   },
   {
     "id": 15,
-    "name": "Wireless Charger",
-    "image": "https://static.thenounproject.com/png/2345679-200.png",
-    "description": "Charge your devices wirelessly with our stylish wireless charger.",
-    "price": 39.99,
-    "reviews": 60,
-    "shortDescription": "Convenient and fast charging."
+    "name": "Wireless Tracker 10000",
+    "image": "/products/product5.png",
+    "description": "Enjoy high-quality sound on the go with our portable Bluetooth speaker.",
+    "price": 59.99,
+    "reviews": 120,
+    "shortDescription": "Crystal clear sound with deep bass."
   },
   {
     "id": 16,
-    "name": "Home Automation Hub",
-    "image": "https://static.thenounproject.com/png/3456780-200.png",
+    "name": "OBD Tracker",
+    "image": "/products/product1.png",
     "description": "Control all your smart devices with our central automation hub.",
     "price": 99.99,
     "reviews": 70,
@@ -145,8 +145,8 @@
   },
   {
     "id": 17,
-    "name": "Smart Scale",
-    "image": "https://static.thenounproject.com/png/4567891-200.png",
+    "name": "Vehicle 4G Tracker",
+    "image": "/products/product2.png",
     "description": "Track your weight and health metrics with our smart scale.",
     "price": 59.99,
     "reviews": 80,
@@ -154,8 +154,8 @@
   },
   {
     "id": 18,
-    "name": "Bluetooth Tracker",
-    "image": "https://static.thenounproject.com/png/5678902-200.png",
+    "name": "Vehicle Tracker Lite",
+    "image": "/products/product3.png",
     "description": "Never lose your belongings again with our Bluetooth tracker.",
     "price": 24.99,
     "reviews": 150,
