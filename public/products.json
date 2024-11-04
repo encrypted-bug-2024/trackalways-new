@@ -3,6 +3,14 @@
     "id": 1,
     "name": "OBD Tracker",
     "image": "/products/product1.png",
+    "images": [
+      "/products/product1.png",
+      "/products/product1a.png",
+      "/products/product1b.png",
+      "/products/product1c.png",
+      "/products/product1d.png",
+      "/products/product1e.png"
+    ],
     "description": "Stay connected with our Smart GPS Tracker. Ideal for personal use or tracking pets.",
     "price": 29.99,
     "reviews": 105,
@@ -12,6 +20,14 @@
     "id": 2,
     "name": "Vehicle 4G Tracker",
     "image": "/products/product2.png",
+    "images": [
+      "/products/product2.png",
+      "/products/product2a.png",
+      "/products/product2b.png",
+      "/products/product2c.png",
+      "/products/product2d.png",
+      "/products/product2e.png"
+    ],
     "description": "Experience the freedom of wireless music with our sleek headphones.",
     "price": 49.99,
     "reviews": 210,
@@ -21,6 +37,14 @@
     "id": 3,
     "name": "Vehicle Tracker Lite",
     "image": "/products/product3.png",
+    "images": [
+      "/products/product3.png",
+      "/products/product3a.png",
+      "/products/product3b.png",
+      "/products/product3c.png",
+      "/products/product3d.png",
+      "/products/product3e.png"
+    ],
     "description": "Track your fitness goals and health metrics with our innovative smartwatch.",
     "price": 199.99,
     "reviews": 85,
@@ -30,6 +54,14 @@
     "id": 4,
     "name": "Wireless Tracker 6000",
     "image": "/products/product4.png",
+    "images": [
+      "/products/product4.png",
+      "/products/product4a.png",
+      "/products/product4b.png",
+      "/products/product4c.png",
+      "/products/product4d.png",
+      "/products/product4e.png"
+    ],
     "description": "Never run out of battery again with our high-capacity portable charger.",
     "price": 25.99,
     "reviews": 150,
@@ -39,6 +71,14 @@
     "id": 5,
     "name": "Wireless Tracker 10000",
     "image": "/products/product5.png",
+    "images": [
+      "/products/product5.png",
+      "/products/product5a.png",
+      "/products/product5b.png",
+      "/products/product5c.png",
+      "/products/product5d.png",
+      "/products/product5e.png"
+    ],
     "description": "Enjoy high-quality sound on the go with our portable Bluetooth speaker.",
     "price": 59.99,
     "reviews": 120,

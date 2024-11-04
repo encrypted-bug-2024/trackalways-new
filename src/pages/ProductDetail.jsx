@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaStar, FaArrowRight } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
+import { FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
 
 const ProductDetail = () => {
@@ -7,6 +8,11 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [similarProducts, setSimilarProducts] = useState([]);
   const [error, setError] = useState(null);
+  const [mainImageIndex, setMainImageIndex] = useState(0); // State for main image index
+
+  // Variables to track touch events
+  let touchStartX = 0;
+  let touchEndX = 0;
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -39,33 +45,106 @@ const ProductDetail = () => {
     fetchSimilarProducts();
   }, [id]);
 
+  // Swipe handling functions
+  const handleTouchStart = (e) => {
+    touchStartX = e.touches[0].clientX; // Get initial touch position
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX = e.touches[0].clientX; // Get current touch position
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      // Swiped left
+      setMainImageIndex(prevIndex => (prevIndex + 1) % product.images.length);
+    } else if (touchEndX - touchStartX > 50) {
+      // Swiped right
+      setMainImageIndex(prevIndex => (prevIndex - 1 + product.images.length) % product.images.length);
+    }
+  };
+
+  const handleThumbnailClick = (index) => {
+    setMainImageIndex(index);
+  };
+
+  const handleDotClick = (index) => {
+    setMainImageIndex(index);
+  };
+
+  const goToNextImage = () => {
+    setMainImageIndex((prevIndex) => (prevIndex + 1) % product.images.length);
+  };
+
+  const goToPreviousImage = () => {
+    setMainImageIndex((prevIndex) => (prevIndex - 1 + product.images.length) % product.images.length);
+  };
+
   if (error) return <p className="text-red-500">{error}</p>;
   if (!product) return <p>Loading...</p>;
 
   return (
     <div className="mt-40 px-4 md:px-10 lg:px-20">
       <div className="flex flex-col md:flex-col lg:flex-row items-start gap-6">
-        {/* Thumbnails */}
-        <div className="grid grid-cols-3 hidden lg:grid lg:grid-cols-1 gap-2 w-full lg:w-40 p-0">
-          <img src={product.image} alt="Thumbnail 1" className="h-32 object-cover rounded-md border w-full max-w-[120px]" />
-          <img src={product.image} alt="Thumbnail 2" className="h-32 object-cover rounded-md border w-full max-w-[120px]" />
-          <img src={product.image} alt="Thumbnail 3" className="h-32 object-cover rounded-md border w-full max-w-[120px]" />
+       {/* Thumbnails */}
+       <div className="grid grid-cols-3 hidden lg:grid lg:grid-cols-1 gap-2 w-full lg:w-40 p-0">
+          {product.images.slice(0, 3).map((img, index) => (
+            <img 
+              key={index} 
+              src={img} 
+              alt={`Thumbnail ${index + 1}`} 
+              className="h-32 object-cover rounded-md border w-full max-w-[120px]" 
+              onClick={() => handleThumbnailClick(index)} // Handle thumbnail click
+            />
+          ))}
         </div>
 
         {/* Main Image */}
-        <div className="flex flex-col items-center md:items-center">
-          <div className="w-full lg:w-96 h-64 lg:-ml-8 lg:h-[400px]">
-            <img src={product.image} alt={product.name} className="w-full h-full object-cover rounded-md shadow" />
+        <div className="flex flex-col w-full lg:w-96 relative lg:items-center">
+          <div 
+            className="lg:w-96 h-[400px] md:h-[600px] lg:-ml-8 lg:h-[400px]" 
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <img 
+              src={product.images[mainImageIndex]} // Display main image based on index
+              alt={product.name} 
+              className="w-full  h-full object-fit rounded-md shadow" 
+            />
+            {/* Left and Right Arrows */}
+            <button onClick={goToPreviousImage} className="absolute lg:-left-8 top-1/2 transform -translate-y-1/2 ">
+              <FaChevronLeft className="text-green-600" />
+            </button>
+            <button onClick={goToNextImage} className="absolute -right-0.5 top-1/2 transform -translate-y-1/2 ">
+              <FaChevronRight className="text-green-600" />
+            </button>
+          </div>
+          
+          {/* Dots for image slider */}
+          <div className="flex justify-center mt-2">
+            {product.images.map((_, index) => (
+              <div 
+                key={index} 
+                className={`h-2 w-2 mx-1 rounded-full ${mainImageIndex === index ? 'bg-green-600' : 'bg-gray-300 cursor-pointer'}`} 
+                onClick={() => handleDotClick(index)} 
+              />
+            ))}
           </div>
         </div>
 
-        {/* Thumbnails */}
+        {/* Thumbnails for smaller screens */}
         <div className="grid grid-cols-3 lg:grid-cols-1 gap-2 w-full lg:w-[590px] lg:hidden p-0 mt-2">
-          <img src={product.image} alt="Thumbnail 1" className="h-36 object-cover rounded-md border w-full" />
-          <img src={product.image} alt="Thumbnail 2" className="h-36 object-cover rounded-md border w-full" />
-          <img src={product.image} alt="Thumbnail 3" className="h-36 object-cover rounded-md border w-full" />
+          {product.images.slice(0, 3).map((img, index) => (
+            <img 
+              key={index} 
+              src={img} 
+              alt={`Thumbnail ${index + 1}`} 
+              className="h-36 object-fit rounded-md border w-full" 
+              onClick={() => handleThumbnailClick(index)} // Handle thumbnail click
+            />
+          ))}
         </div>
-
 
         {/* Product Details */}
         <div className="w-full lg:w-2/3 p-0 mt-6 md:mt-0">
@@ -105,7 +184,7 @@ const ProductDetail = () => {
           </div>
 
           {/* Add to Cart Button */}
-          <button className="bg-green-600 text-white py-2 px-6 rounded-full mt-6 w-full md:w-auto">
+          <button className="bg-green-600 text-white py-2 px-6 rounded-full mt-6 w-full lg:w-auto">
             Add to Cart
           </button>
         </div>
@@ -124,8 +203,8 @@ const ProductDetail = () => {
         </ul>
       </div>
 
-      {/* Similar Products */}
-      <div className="mt-20 mb-14">
+       {/* Similar Products */}
+       <div className="mt-20 mb-14">
         <h2 className="text-3xl md:text-4xl mt-28 font-semibold mb-8">Similar Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {similarProducts.map(similarProduct => (
@@ -136,7 +215,7 @@ const ProductDetail = () => {
               <img
                 src={similarProduct.image}
                 alt={similarProduct.name}
-                className="bg-white w-full h-96 md:h-96 lg:h-56 object-cover" // Increased height for mobile
+                className="bg-white w-full h-96 md:h-96 lg:h-56 object-fit" // Increased height for mobile
               />
               <div className="flex-grow p-4 flex flex-col justify-between">
                 <h2 className="text-white text-lg md:text-xl font-semibold">{similarProduct.name}</h2>
