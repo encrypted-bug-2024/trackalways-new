@@ -114,7 +114,7 @@ const Contact = () => {
 <div className="mt-20 mb-10 flex justify-center px-4 md:px-8 lg:px-16">
   <div className="w-full max-w-8xl relative">
   <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29364.123896676444!2d77.4183657!3d23.2598894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c426d6b3a23d7%3A0x7d7b4e2c8d8ec0d8!2sYasoda%20Garden%20Bagnugaliya%2C%20Bhopal%2C%20Madhya%20Pradesh%20462043!5e0!3m2!1sen!2sin!4v1698600606315"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7331.368520480632!2d77.451181!3d23.254574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43d9b6e83c7d%3A0xf49cec7f079ae3a9!2sTrackalways!5e0!3m2!1sen!2sin!4v1730700692795!5m2!1sen!2sin"
       width="100%"
       height="450"
       className="rounded-lg shadow-lg mb-8"
@@ -122,18 +122,8 @@ const Contact = () => {
       loading="lazy"
       title="TrackAlways- Yasoda Garden Bagnugaliya, Bhopal"
     ></iframe>
-
-    {/* Contact Card */}
-    <div className="absolute bottom-12 right-14 bg-white rounded-lg shadow-lg p-4 w-56 text-center">
-      <h5 className="text-xl font-semibold">TrackAlways</h5>
-      <p>A-01, Yasoda Garden Bagnugaliya,</p>
-      <p>Bhopal - 462043</p>
-    </div>
   </div>
 </div>
-
-
-
 
     </>
   );
