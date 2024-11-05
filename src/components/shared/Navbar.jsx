@@ -113,14 +113,14 @@ const Navbar = () => {
         <div className="hidden md:flex items-center justify-center flex-grow">
           <ul className="flex space-x-8 text-sm font-medium">
             <li>
-              <NavLink to="/" className={({ isActive }) =>
+              <NavLink to="/"  onClick={closeDropdowns} className={({ isActive }) =>
                 isActive ? "text-green-600 border-b-2 border-green-600" : "text-gray-600 hover:text-green-600"
               }>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/products" className={({ isActive }) =>
+              <NavLink to="/products"  onClick={closeDropdowns} className={({ isActive }) =>
                 isActive ? "text-green-600 border-b-2 border-green-600" : "text-gray-600 hover:text-green-600"
               }>
                 Products
@@ -144,35 +144,35 @@ const Navbar = () => {
                       title="About Us"
                       description="We are the software people! Get to know us, our company philosophy, and milestones."
                       to="/about-us"
-                      onClick={closeDropdowns}
+                      onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/about-us'}
                     />
                     <DropdownItem
                       title="Contact Us"
                       description="Get in touch with us and let us know how we can help you."
                       to="/contact-us"
-                      onClick={closeDropdowns}
+                      onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/contact-us'}
                     />
                     <DropdownItem
                       title="Careers"
                       description="We'd love for you to join the family. Browse for jobs and submit your resume here!"
                       to="/careers"
-                      onClick={closeDropdowns}
+                      onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/careers'}
                     />
                     <DropdownItem
                       title="Blog"
                       description="Discover more about our company and industry in our blog."
                       to="/blog"
-                      onClick={closeDropdowns}
+                      onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/blog'}
                     />
                     <DropdownItem
                       title="Media Coverage"
                       description="See our media coverage and news updates about us."
                       to="/media-coverage"
-                      onClick={closeDropdowns}
+                      onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/media-coverage'}
                     />
                   </div>
@@ -197,56 +197,56 @@ const Navbar = () => {
                       title="Sales and Services"
                       description="Electrical & Utilities Maintenance, GPS Tracking Device Service & Maintenance, Health Care & Medical Sales"
                       to="/industry"
-                      onClick={closeDropdowns}
+                     onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/industry'}
                     />
                     <DropdownItem
                       title="Energy"
                       description="Electric Utility Companies, Gas And Water Utility Providers, Renewable Energy Installation & Maintenance"
                       to="/industry"
-                      onClick={closeDropdowns}
+                     onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/industry1'}
                     />
                     <DropdownItem
                       title="Passenger Transport"
                       description="Bus Services, School Transportation, Airport Shuttle Services, Tour & Charter Bus Operators, Ferries"
                       to="/industry"
-                      onClick={closeDropdowns}
+                     onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/industry2'}
                     />
                     <DropdownItem
                       title="Health Care"
                       description="Medical Equipment Transport, Pharmaceutical Distribution, Blood & Organ Transport Services"
                       to="/industry"
-                      onClick={closeDropdowns}
+                     onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/industry3'}
                     />
                      <DropdownItem
                       title="Agriculture"
                       description="Farming Operations Fleets, Precision Agriculture For Crop Management, Livestock Transportation"
                       to="/industry"
-                      onClick={closeDropdowns}
+                     onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/industry3'}
                     />
                      <DropdownItem
                       title="Construction"
                       description="Construction Companies, Excavation & Earthmoving, Equipment Rental Businesses"
                       to="/industry"
-                      onClick={closeDropdowns}
+                     onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/industry3'}
                     />
                      <DropdownItem
                       title="Trucking"
                       description="Freight Transportation & Logistics, Long-Haul Trucking, Local Delivery Services, Refrigerated Trucking"
                       to="/industry"
-                      onClick={closeDropdowns}
+                     onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/industry3'}
                     />
                      <DropdownItem
                       title="Security"
                       description="Cash Carry Vans, Secure Cargo Transport, Government & Military Transport"
                       to="/industry"
-                      onClick={closeDropdowns}
+                     onClick={() => { closeDropdowns(); closeMenu(); }}
                       isActive={location.pathname === '/industry3'}
                     />
                   </div>
