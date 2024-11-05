@@ -5,7 +5,7 @@ const Timeline = () => {
     {
       year: "2017",
       title: "Established",
-      description: `Trackology was established in 2017. It has been at the forefront of providing innovative real-time tracking solutions. Over the years, the company has expanded its services to cover major elections and COVID emergencies, gaining a reputation for reliability and precision in tracking systems.`,
+      description: `TrackAlways was established in 2017. It has been at the forefront of providing innovative real-time tracking solutions. Over the years, the company has expanded its services to cover major elections and COVID emergencies, gaining a reputation for reliability and precision in tracking systems.`,
       isGreen: true, // Mark the first box as green
     },
     {
@@ -31,12 +31,12 @@ const Timeline = () => {
     {
       year: "2023",
       title: "Vidhan Sabha Elections (M.P.)",
-      description: `During the 2023 Vidhan Sabha Elections, Trackology expanded its services across 50 districts, providing GPS tracking for EVMs and live webcasting on polling days. This initiative greatly improved election monitoring and public transparency.`,
+      description: `During the 2023 Vidhan Sabha Elections, TrackAlways expanded its services across 50 districts, providing GPS tracking for EVMs and live webcasting on polling days. This initiative greatly improved election monitoring and public transparency.`,
     },
     {
       year: "2024",
       title: "Lok Sabha Elections (M.P. & Bihar)",
-      description: `In 2024, Trackology extended its tracking services to cover both M.P. and Bihar. Supplied and installed GPS devices for EVMs in multiple districts, including live webcasting for real-time updates on counting days across 36 districts in Bihar.`,
+      description: `In 2024, TrackAlways extended its tracking services to cover both M.P. and Bihar. Supplied and installed GPS devices for EVMs in multiple districts, including live webcasting for real-time updates on counting days across 36 districts in Bihar.`,
     },
   ];
 
