@@ -106,7 +106,7 @@ const Navbar = () => {
       >
         <div className="flex items-center">
           <NavLink to="/">
-            <img src={logo} alt="Logo" className="h-8" />
+            <img src={logo} onClick={closeDropdowns} alt="Logo" className="h-8" />
           </NavLink>
         </div>
 
@@ -130,15 +130,15 @@ const Navbar = () => {
             {/* Discover Dropdown */}
             <li className="relative">
               <button
-                onClick={toggleDiscover}
-                className={`flex items-center ${discoverOpen || isDiscoverActive ? "text-green-600 border-b-2 border-green-600" : "text-gray-600 hover:text-green-600"}`}
+                onMouseEnter={toggleDiscover} // Use onMouseEnter to open the dropdown// Use onMouseLeave to close the dropdown
+                 className={`flex items-center ${discoverOpen || isDiscoverActive ? "text-green-600 border-b-2 border-green-600" : "text-gray-600 hover:text-green-600"}`}
               >
                 Discover <FaAngleRight className="ml-1" />
               </button>
               {discoverOpen && (
                 <div
                   className="absolute left-1/2 transform -translate-x-[55%] mt-4 w-[80vw] bg-white rounded-lg border border-gray-200 shadow-lg"
-                >
+               >
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
                     <DropdownItem
                       title="About Us"
@@ -183,7 +183,7 @@ const Navbar = () => {
             {/* Industries Dropdown */}
             <li className="relative">
               <button
-                onClick={toggleIndustries}
+               onMouseEnter={toggleIndustries} 
                 className={`flex items-center ${industriesOpen || isIndustriesActive ? "text-green-600 border-b-2 border-green-600" : "text-gray-600 hover:text-green-600"}`}
               >
                 Industries <FaAngleRight className="ml-1" />
