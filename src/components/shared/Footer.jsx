@@ -129,22 +129,22 @@ const Footer = () => {
 
             {/* Social Media Icons */}
             <div className="flex space-x-4 lg:hidden">
-              <a
-                href="https://facebook.com"
+                <a
+                href="https://www.facebook.com/trackalways"
                 aria-label="Facebook"
                 className="text-gray-600 hover:text-black"
               >
                 <FaFacebookF size={20} />
               </a>
               <a
-                href="https://twitter.com"
-                aria-label="Twitter"
+                href="https://www.linkedin.com/company/trackalways/"
+                aria-label="Linkedin"
                 className="text-gray-600 hover:text-black"
               >
-                <FaTwitter size={20} />
+                <FaLinkedin size={20} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/trackalwaysindia/"
                 aria-label="Instagram"
                 className="text-gray-600 hover:text-black"
               >
