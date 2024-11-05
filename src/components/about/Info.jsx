@@ -9,7 +9,7 @@ const Info = () => {
         <div className="flex flex-col md:flex-row justify-between items-center w-full">
           {/* Left Side - About Us Heading and Paragraph */}
           <div className="md:w-full lg:w-1/2 md:pr-4 lg:pr-4 text-center md:text-center lg:text-left">
-            <h3 className="text-5xl mt-14 md:mt-14 mb-10 lg:-mt-10">About Us</h3>
+            <h3 className="text-5xl mt-20 md:mt-14 mb-10 lg:-mt-10">About Us</h3>
             <p className="text-gray-700 text-lg mb-4">
               Welcome to Trackalways, your trusted partner in telematics and GPS solutions. Established in 2018, Trackalways has been at the forefront of providing innovative and reliable tracking solutions designed to empower businesses across various industries. Our commitment to excellence, customer-centric approach, and cutting-edge technology set us apart in the dynamic world of telematics.
             </p>
