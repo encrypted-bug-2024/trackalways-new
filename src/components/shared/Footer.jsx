@@ -39,28 +39,34 @@ const Footer = () => {
 
             {/* Social Media Icons centered below the input field */}
             <div className="flex space-x-4 mt-4">
-              <a
-                href="https://www.facebook.com/trackalways"
-                aria-label="Facebook"
-                className="text-gray-600 hover:text-black"
-              >
-                <FaFacebookF size={20} />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/trackalways/"
-                aria-label="Linkedin"
-                className="text-gray-600 hover:text-black"
-              >
-                <FaLinkedin size={20} />
-              </a>
-              <a
-                href="https://www.instagram.com/trackalwaysindia/"
-                aria-label="Instagram"
-                className="text-gray-600 hover:text-black"
-              >
-                <FaInstagram size={20} />
-              </a>
-            </div>
+  <a
+    href="https://www.facebook.com/trackalways"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="text-gray-600 hover:text-black"
+  >
+    <FaFacebookF size={20} />
+  </a>
+  <a
+    href="https://www.linkedin.com/company/trackalways/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Linkedin"
+    className="text-gray-600 hover:text-black"
+  >
+    <FaLinkedin size={20} />
+  </a>
+  <a
+    href="https://www.instagram.com/trackalwaysindia/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="text-gray-600 hover:text-black"
+  >
+    <FaInstagram size={20} />
+  </a>
+</div>
           </div>
         </div>
 
@@ -129,27 +135,33 @@ const Footer = () => {
 
             {/* Social Media Icons */}
             <div className="flex space-x-4 lg:hidden">
-                <a
-                href="https://www.facebook.com/trackalways"
-                aria-label="Facebook"
-                className="text-gray-600 hover:text-black"
-              >
-                <FaFacebookF size={20} />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/trackalways/"
-                aria-label="Linkedin"
-                className="text-gray-600 hover:text-black"
-              >
-                <FaLinkedin size={20} />
-              </a>
-              <a
-                href="https://www.instagram.com/trackalwaysindia/"
-                aria-label="Instagram"
-                className="text-gray-600 hover:text-black"
-              >
-                <FaInstagram size={20} />
-              </a>
+            <a
+    href="https://www.facebook.com/trackalways"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+    className="text-gray-600 hover:text-black"
+  >
+    <FaFacebookF size={20} />
+  </a>
+  <a
+    href="https://www.linkedin.com/company/trackalways/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Linkedin"
+    className="text-gray-600 hover:text-black"
+  >
+    <FaLinkedin size={20} />
+  </a>
+  <a
+    href="https://www.instagram.com/trackalwaysindia/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="text-gray-600 hover:text-black"
+  >
+    <FaInstagram size={20} />
+  </a>
             </div>
           </div>
         </div>
