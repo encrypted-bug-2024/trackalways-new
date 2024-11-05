@@ -1,4 +1,3 @@
-import Hero from '../components/about/Hero';
 import Info from '../components/about/Info';
 import WhyUs from '../components/about/WhyUs';
 import Mission from '../components/about/Mission';
@@ -8,7 +7,6 @@ import Timeline from '../components/about/Timeline';
 const About = () => {
   return (
     <>
-       <Hero />
        <Info />
        <WhyUs />
        <Mission />

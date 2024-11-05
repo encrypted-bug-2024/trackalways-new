@@ -14,11 +14,11 @@ const Clients = () => {
   ];
 
   return (
-    <section className="w-full mx-auto mt-28 mb-48 p-8 text-center">
+    <section className="w-full mx-auto mt-4 mb-20 p-8 text-center">
       {/* Centered Heading */}
-      <h2 className="font-bold text-3xl md:text-5xl mb-12">Our Clients</h2>
+      <h2 className="font-bold text-3xl md:text-5xl mb-2">Our Clients</h2>
 
-      <div className="w-full mt-36 overflow-hidden relative">
+      <div className="w-full mt-20 overflow-hidden relative">
         {/* Duplicating the logos for seamless effect */}
         <ul className="flex animate-marquee whitespace-nowrap items-center">
           {clientLogos.map((logo, index) => (

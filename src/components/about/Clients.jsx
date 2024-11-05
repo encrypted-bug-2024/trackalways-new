@@ -14,7 +14,7 @@ const Clients = () => {
   ];
 
   return (
-    <section className="w-full mx-auto mt-28 mb-48 p-8 text-center">
+    <section className="w-full mx-auto mt-10 mb-28 p-8 text-center">
       {/* Centered Heading */}
       <h2 className="font-bold text-3xl md:text-5xl mb-12">Our Clients</h2>
 

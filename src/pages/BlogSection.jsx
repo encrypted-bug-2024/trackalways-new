@@ -56,9 +56,6 @@ const BlogSection = () => {
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-50">
             <h2 className="text-3xl mt-8 md:text-8xl">Blogs</h2>
-            <p className="mt-4 text-lg">
-              Home <span className="text-white"> &gt;</span> <span className="opacity-75">Blog</span>
-            </p>
           </div>
         </div>
       </div>

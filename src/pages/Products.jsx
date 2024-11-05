@@ -21,6 +21,15 @@ const Product = () => {
       .catch(err => console.error(err));
   }, []);
 
+  // Filter products based on search term
+  useEffect(() => {
+    const results = products.filter(product =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredProducts(results);
+    setCurrentPage(1); // Reset to the first page on search change
+  }, [searchTerm, products]);
+
   // Get current products for the page
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -28,16 +37,6 @@ const Product = () => {
 
   // Handle page change
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // Handle search
-  const handleSearch = () => {
-    const results = products.filter(product =>
-      product.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredProducts(results);
-    setSearchTerm(''); // Clear input after search
-    setCurrentPage(1); // Reset to first page on new search
-  };
 
   return (
     <>
@@ -57,9 +56,6 @@ const Product = () => {
           {/* Centered Text */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-50">
             <h2 className="text-3xl mt-8 md:text-8xl">Products</h2>
-            <p className="mt-4 text-lg">
-              Home <span className="text-white"> &gt;</span> <span className="opacity-75">Products</span>
-            </p>
           </div>
         </div>
       </div>
@@ -80,13 +76,8 @@ const Product = () => {
             className="border p-4 w-full h-14 rounded-full pr-14"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                handleSearch(); // Call the search handler on Enter
-              }
-            }}
           />
-          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-600 p-2 rounded-full cursor-pointer" onClick={handleSearch}>
+          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-600 p-2 rounded-full cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M11 5a6 6 0 100 12 6 6 0 000-12z" />
             </svg>
@@ -94,13 +85,13 @@ const Product = () => {
         </div>
 
         {/* Products */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 gap-6">
           {currentProducts.map(product => (
-            <div key={product.id} className="border-2 border-black rounded-2xl shadow-md bg-[#439600] overflow-hidden flex flex-col mb-4"> {/* Added mb-4 for bottom margin */}
+            <div key={product.id} className="border-2 border-black rounded-2xl shadow-md bg-[#439600] overflow-hidden flex flex-col mb-4">
               <img
                 src={product.image}
                 alt={product.name}
-                className="bg-white w-full h-[70%] object-cover" // Takes the top 70% of the card
+                className="bg-white w-full h-[70%] object-cover"
               />
               <div className="flex-grow p-4 flex flex-col justify-between">
                 <h2 className="text-white text-xl font-semibold">{product.name}</h2>

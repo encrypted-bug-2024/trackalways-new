@@ -27,7 +27,7 @@ const Card = () => {
   }, []);
 
   return (
-    <section className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 md:gap-12 lg:gap-8 w-11/12 my-20 md:my-28 lg:my-20">
+    <section className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 md:gap-12 lg:gap-8 w-11/12 my-20 md:my-28 lg:my-10">
       {[
         { logo: logo1, title: 'Track Your Fleet', text: 'Live tracking is available, every 60 seconds, 24 hours a day from any global location on any desktop or mobile device with our fleet tracker GPS solutions.' },
         { logo: logo2, title: 'Access Reports Easily', text: 'Fleetsmart provides a comprehensive report suite delivering information on a multitude of fleet management information.' },
