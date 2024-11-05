@@ -195,38 +195,59 @@ const Navbar = () => {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
                     <DropdownItem
                       title="Sales and Services"
-                      description="Overview of Industry Sales and Services."
+                      description="Electrical & Utilities Maintenance, GPS Tracking Device Service & Maintenance, Health Care & Medical Sales"
                       to="/industry"
                       onClick={closeDropdowns}
                       isActive={location.pathname === '/industry'}
                     />
                     <DropdownItem
-                      title="Industry 2"
-                      description="Overview of Industry 2."
+                      title="Energy"
+                      description="Electric Utility Companies, Gas And Water Utility Providers, Renewable Energy Installation & Maintenance"
                       to="/industry"
                       onClick={closeDropdowns}
                       isActive={location.pathname === '/industry1'}
                     />
                     <DropdownItem
-                      title="Industry 3"
-                      description="Overview of Industry 3."
+                      title="Passenger Transport"
+                      description="Bus Services, School Transportation, Airport Shuttle Services, Tour & Charter Bus Operators, Ferries"
                       to="/industry"
                       onClick={closeDropdowns}
                       isActive={location.pathname === '/industry2'}
                     />
                     <DropdownItem
-                      title="Industry 4"
-                      description="Overview of Industry 4."
+                      title="Health Care"
+                      description="Medical Equipment Transport, Pharmaceutical Distribution, Blood & Organ Transport Services"
                       to="/industry"
                       onClick={closeDropdowns}
                       isActive={location.pathname === '/industry3'}
                     />
-                    <DropdownItem
-                      title="More"
-                      description="Explore more industries."
+                     <DropdownItem
+                      title="Agriculture"
+                      description="Farming Operations Fleets, Precision Agriculture For Crop Management, Livestock Transportation"
                       to="/industry"
                       onClick={closeDropdowns}
-                      isActive={location.pathname === '/industry4'}
+                      isActive={location.pathname === '/industry3'}
+                    />
+                     <DropdownItem
+                      title="Construction"
+                      description="Construction Companies, Excavation & Earthmoving, Equipment Rental Businesses"
+                      to="/industry"
+                      onClick={closeDropdowns}
+                      isActive={location.pathname === '/industry3'}
+                    />
+                     <DropdownItem
+                      title="Trucking"
+                      description="Freight Transportation & Logistics, Long-Haul Trucking, Local Delivery Services, Refrigerated Trucking"
+                      to="/industry"
+                      onClick={closeDropdowns}
+                      isActive={location.pathname === '/industry3'}
+                    />
+                     <DropdownItem
+                      title="Security"
+                      description="Cash Carry Vans, Secure Cargo Transport, Government & Military Transport"
+                      to="/industry"
+                      onClick={closeDropdowns}
+                      isActive={location.pathname === '/industry3'}
                     />
                   </div>
                 </div>
@@ -336,38 +357,51 @@ const Navbar = () => {
                 <div className="mt-2 space-y-2 pl-4 border-l-2 border-green-600">
                   <DropdownItem
                     title="Sales and Services"
-                    description="Industry overview."
                     to="/industry"
                     onClick={closeMenu}
                     isActive={location.pathname === '/industry'}
                   />
                   <DropdownItem
-                    title="Industry 2"
-                    description="Industry 2 overview."
+                    title="Energy"
                     to="/industry1"
                     onClick={closeMenu}
                     isActive={location.pathname === '/industry1'}
                   />
-                  <DropdownItem
-                    title="Industry 3"
-                    description="Industry 3 overview."
-                    to="/industry2"
+                   <DropdownItem
+                    title="Passenger Transport"
+                    to="/industry1"
                     onClick={closeMenu}
-                    isActive={location.pathname === '/industry2'}
+                    isActive={location.pathname === '/industry1'}
                   />
-                  <DropdownItem
-                    title="Industry 4"
-                    description="Industry 4 overview."
-                    to="/industry3"
+                   <DropdownItem
+                    title="Health Care"
+                    to="/industry1"
                     onClick={closeMenu}
-                    isActive={location.pathname === '/industry3'}
+                    isActive={location.pathname === '/industry1'}
                   />
-                  <DropdownItem
-                    title="More"
-                    description="Explore more industries."
-                    to="/industry4"
+                   <DropdownItem
+                    title="Agriculture"
+                    to="/industry1"
                     onClick={closeMenu}
-                    isActive={location.pathname === '/industry4'}
+                    isActive={location.pathname === '/industry1'}
+                  />
+                   <DropdownItem
+                    title="Construction"
+                    to="/industry1"
+                    onClick={closeMenu}
+                    isActive={location.pathname === '/industry1'}
+                  />
+                   <DropdownItem
+                    title="Trucking"
+                    to="/industry1"
+                    onClick={closeMenu}
+                    isActive={location.pathname === '/industry1'}
+                  />
+                   <DropdownItem
+                    title="Security"
+                    to="/industry1"
+                    onClick={closeMenu}
+                    isActive={location.pathname === '/industry1'}
                   />
                 </div>
               )}
