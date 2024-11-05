@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
@@ -40,21 +40,21 @@ const Footer = () => {
             {/* Social Media Icons centered below the input field */}
             <div className="flex space-x-4 mt-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/trackalways"
                 aria-label="Facebook"
                 className="text-gray-600 hover:text-black"
               >
                 <FaFacebookF size={20} />
               </a>
               <a
-                href="https://twitter.com"
-                aria-label="Twitter"
+                href="https://www.linkedin.com/company/trackalways/"
+                aria-label="Linkedin"
                 className="text-gray-600 hover:text-black"
               >
-                <FaTwitter size={20} />
+                <FaLinkedin size={20} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/trackalwaysindia/"
                 aria-label="Instagram"
                 className="text-gray-600 hover:text-black"
               >
@@ -74,16 +74,16 @@ const Footer = () => {
                 <a href="#" className="text-gray-600 hover:text-black">Home</a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">Career</a>
+                <a href="/careers" className="text-gray-600 hover:text-black">Career</a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">About Us</a>
+                <a href="/about-us" className="text-gray-600 hover:text-black">About Us</a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">Contact Us</a>
+                <a href="/contact-us" className="text-gray-600 hover:text-black">Contact Us</a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-black">Book Demo</a>
+                <a href="/contact-us" className="text-gray-600 hover:text-black">Book Demo</a>
               </li>
             </ul>
           </div>

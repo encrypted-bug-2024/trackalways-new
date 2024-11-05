@@ -23,11 +23,38 @@ const Navbar = () => {
   const [industriesOpen, setIndustriesOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null); 
   const location = useLocation();
+  
 
-  const toggleDiscover = () => setDiscoverOpen(prev => !prev);
-  const toggleIndustries = () => setIndustriesOpen(prev => !prev);
-  const toggleMenu = () => setMenuOpen(prev => !prev);
+  const toggleDropdown = (dropdownName) => {
+    setActiveDropdown((prev) => (prev === dropdownName ? null : dropdownName));
+  };
+
+  const closeDropdown = () => {
+    setActiveDropdown(null);
+  };
+
+  // Close dropdown on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      closeDropdown();
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleDiscover = () => {
+    setDiscoverOpen((prev) => !prev);
+    setIndustriesOpen(false); // Close Industries if Discover is opened
+  };
+
+  const toggleIndustries = () => {
+    setIndustriesOpen((prev) => !prev);
+    setDiscoverOpen(false); // Close Discover if Industries is opened
+  };
+
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   const closeDropdowns = () => {
     setDiscoverOpen(false);
@@ -42,6 +69,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      closeDropdowns(); // Close dropdowns on scroll
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -55,15 +83,20 @@ const Navbar = () => {
 
   // Check if any discover links are active
   const isDiscoverActive = [
-    '/about-us',
-    '/contact-us',
-    '/careers',
-    '/blog',
-    '/media-coverage'
+    "/about-us",
+    "/contact-us",
+    "/careers",
+    "/blog",
+    "/media-coverage",
   ].includes(location.pathname);
 
+  // Check if any industries links are active
   const isIndustriesActive = [
-    '/industry',
+    "/industry",
+    "/industry1",
+    "/industry2",
+    "/industry3",
+    "/industry4",
   ].includes(location.pathname);
 
   return (
@@ -218,68 +251,71 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed top-0 right-0 h-full bg-white w-64 shadow-lg transition-transform transform ${menuOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}>
-        <div className="flex flex-col">
-          <div className="flex justify-between items-center p-4 border-b">
-            <button onClick={toggleMenu} className="text-gray-600">
+      <div
+        className={`fixed top-0 right-0 h-full w-72 bg-white shadow-lg transition-transform transform ${menuOpen ? "translate-x-0" : "translate-x-full"} md:hidden`}
+      >
+        <div className="flex flex-col h-full">
+          {/* Close Button */}
+          <div className="flex justify-between items-center p-4 bg-gray-100 border-b">
+            <button onClick={closeMenu} className="text-gray-600">
               <FaTimes size={24} />
             </button>
           </div>
-          <ul className="p-4">
+
+          {/* Menu Items */}
+          <ul className="p-4 space-y-4">
             <li>
-              <NavLink to="/" onClick={closeMenu} className={({ isActive }) =>
-                isActive ? "text-green-600 border-b-2 border-green-600" : "text-gray-600 hover:text-green-600"
-              }>
+              <NavLink to="/" onClick={closeMenu} className="text-gray-800 hover:text-green-600">
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/products" onClick={closeMenu} className={({ isActive }) =>
-                isActive ? "text-green-600 border-b-2 border-green-600" : "text-gray-600 hover:text-green-600"
-              }>
+              <NavLink to="/products" onClick={closeMenu} className="text-gray-800 hover:text-green-600">
                 Products
               </NavLink>
             </li>
+
+            {/* Discover Dropdown */}
             <li>
               <button
                 onClick={toggleDiscover}
-                className={`flex items-center w-full text-left ${isDiscoverActive ? "text-green-600 border-b-2 border-green-600" : "text-gray-600 hover:text-green-600"}`}
+                className={`flex items-center justify-between w-full text-gray-800 ${discoverOpen ? "text-green-600" : "hover:text-green-600"}`}
               >
-                Discover <FaAngleDown className="ml-1" />
+                Discover <FaAngleDown className={`ml-1 transform ${discoverOpen ? "rotate-180" : ""}`} />
               </button>
               {discoverOpen && (
-                <div className="pl-4">
+                <div className="mt-2 space-y-2 pl-4 border-l-2 border-green-600">
                   <DropdownItem
                     title="About Us"
-                    description="We are the software people! Get to know us, our company philosophy, and milestones."
+                    description="Get to know our story."
                     to="/about-us"
                     onClick={closeMenu}
                     isActive={location.pathname === '/about-us'}
                   />
                   <DropdownItem
                     title="Contact Us"
-                    description="Get in touch with us and let us know how we can help you."
+                    description="Reach out to us."
                     to="/contact-us"
                     onClick={closeMenu}
                     isActive={location.pathname === '/contact-us'}
                   />
                   <DropdownItem
                     title="Careers"
-                    description="We'd love for you to join the family. Browse for jobs and submit your resume here!"
+                    description="Join our team."
                     to="/careers"
                     onClick={closeMenu}
                     isActive={location.pathname === '/careers'}
                   />
                   <DropdownItem
                     title="Blog"
-                    description="Discover more about our company and industry in our blog."
+                    description="Read our blog."
                     to="/blog"
                     onClick={closeMenu}
                     isActive={location.pathname === '/blog'}
                   />
                   <DropdownItem
                     title="Media Coverage"
-                    description="See our media coverage and news updates about us."
+                    description="See our latest news."
                     to="/media-coverage"
                     onClick={closeMenu}
                     isActive={location.pathname === '/media-coverage'}
@@ -287,47 +323,49 @@ const Navbar = () => {
                 </div>
               )}
             </li>
+
+            {/* Industries Dropdown */}
             <li>
               <button
                 onClick={toggleIndustries}
-                className={`flex items-center w-full text-left ${isIndustriesActive ? "text-green-600 border-b-2 border-green-600" : "text-gray-600 hover:text-green-600"}`}
+                className={`flex items-center justify-between w-full text-gray-800 ${industriesOpen ? "text-green-600" : "hover:text-green-600"}`}
               >
-                Industries <FaAngleDown className="ml-1" />
+                Industries <FaAngleDown className={`ml-1 transform ${industriesOpen ? "rotate-180" : ""}`} />
               </button>
               {industriesOpen && (
-                <div className="pl-4">
+                <div className="mt-2 space-y-2 pl-4 border-l-2 border-green-600">
                   <DropdownItem
                     title="Sales and Services"
-                    description="Overview of Industry Sales and Services."
+                    description="Industry overview."
                     to="/industry"
                     onClick={closeMenu}
                     isActive={location.pathname === '/industry'}
                   />
                   <DropdownItem
                     title="Industry 2"
-                    description="Overview of Industry 2."
-                    to="/industry"
+                    description="Industry 2 overview."
+                    to="/industry1"
                     onClick={closeMenu}
                     isActive={location.pathname === '/industry1'}
                   />
                   <DropdownItem
                     title="Industry 3"
-                    description="Overview of Industry 3."
-                    to="/industry"
+                    description="Industry 3 overview."
+                    to="/industry2"
                     onClick={closeMenu}
                     isActive={location.pathname === '/industry2'}
                   />
                   <DropdownItem
                     title="Industry 4"
-                    description="Overview of Industry 4."
-                    to="/industry"
+                    description="Industry 4 overview."
+                    to="/industry3"
                     onClick={closeMenu}
                     isActive={location.pathname === '/industry3'}
                   />
                   <DropdownItem
                     title="More"
                     description="Explore more industries."
-                    to="/industry"
+                    to="/industry4"
                     onClick={closeMenu}
                     isActive={location.pathname === '/industry4'}
                   />

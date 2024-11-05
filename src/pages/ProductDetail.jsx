@@ -152,7 +152,7 @@ const ProductDetail = () => {
 
           {/* Price and Rating */}
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between mt-2">
-            <p className="text-black text-2xl md:text-3xl font-bold">${product.price}</p>
+            <p className="text-black text-2xl md:text-3xl font-bold">₹{product.price}</p>
             <div className="flex items-center mt-2 md:mt-0">
               {[...Array(5)].map((_, index) => (
                 <FaStar key={index} className="text-yellow-500" />
@@ -165,20 +165,20 @@ const ProductDetail = () => {
 
           {/* Description */}
           <p className="text-gray-700 mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+           {product.detail}
           </p>
 
           {/* Description Points */}
           <ul className="mt-4 text-gray-700 space-y-2 list-disc list-inside">
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>{product.detail1}</li>
+            <li>{product.detail2}</li>
+            <li>{product.detail3}</li>
           </ul>
 
           {/* Delivery Information */}
           <div className="flex flex-col mt-6 text-gray-500">
             <div className="flex items-center text-green-600">
-              ✓ Free worldwide shipping on orders over $50
+              ✓ Free worldwide shipping on orders over ₹500
             </div>
             <div className="mt-2">Delivery in 3-7 Working Days & Return</div>
           </div>
@@ -195,12 +195,12 @@ const ProductDetail = () => {
         <h2 className="text-3xl md:text-4xl text-gray-600 font-semibold">Description</h2>
         <p className="text-gray-700 mt-4">{product.description}</p>
         <ul className="list-disc list-inside mt-4 text-gray-700">
-          <li>Poor customer support response times.</li>
-          <li>Limited compatibility with certain devices.</li>
-          <li>Occasional software bugs and glitches.</li>
-          <li>Higher price point compared to similar products.</li>
-          <li>Steeper learning curve for new users.</li>
-        </ul>
+           <li><strong>Unmatched customer support</strong> with quick response times, ensuring our clients are always taken care of.</li>
+           <li>Dedicated to continuous improvement, even though <strong>limited compatibility with certain devices</strong> may occasionally occur, we actively work to expand our support.</li>
+           <li>Our commitment to innovation means <strong>software is updated frequently</strong> to address any minor bugs, maintaining a high-quality experience.</li>
+           <li><strong>Premium value at a competitive price</strong> – a higher price point reflects our dedication to quality and unique features.</li>
+           <li><strong>Comprehensive feature set</strong> that may have a learning curve, but offers powerful tools for users as they grow familiar with it.</li>
+      </ul>
       </div>
 
        {/* Similar Products */}
