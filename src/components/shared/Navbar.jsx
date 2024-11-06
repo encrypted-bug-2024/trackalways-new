@@ -93,7 +93,7 @@ const Navbar = () => {
   // Check if any industries links are active
   const isIndustriesActive = [
     "/industry",
-    "/industry1",
+    "/energy-industry",
     "/industry2",
     "/industry3",
     "/industry4",
@@ -203,9 +203,9 @@ const Navbar = () => {
                     <DropdownItem
                       title="Energy"
                       description="Electric Utility Companies, Gas And Water Utility Providers, Renewable Energy Installation & Maintenance"
-                      to="/industry"
+                      to="/energy-industry"
                      onClick={() => { closeDropdowns(); closeMenu(); }}
-                      isActive={location.pathname === '/industry1'}
+                      isActive={location.pathname === '/energy-industry'}
                     />
                     <DropdownItem
                       title="Passenger Transport"
@@ -363,9 +363,9 @@ const Navbar = () => {
                   />
                   <DropdownItem
                     title="Energy"
-                    to="/industry1"
+                    to="/energy-industry"
                     onClick={closeMenu}
-                    isActive={location.pathname === '/industry1'}
+                    isActive={location.pathname === '/energy-industry'}
                   />
                    <DropdownItem
                     title="Passenger Transport"
