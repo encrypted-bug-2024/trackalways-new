@@ -94,9 +94,12 @@ const Navbar = () => {
   const isIndustriesActive = [
     "/industry",
     "/energy-industry",
-    "/industry2",
-    "/industry3",
-    "/industry4",
+    "/passanger-transport",
+    "/health-care",
+    "/agriculture",
+    "/construction",
+    "/trucking",
+    "/security"
   ].includes(location.pathname);
 
   return (
@@ -210,44 +213,44 @@ const Navbar = () => {
                     <DropdownItem
                       title="Passenger Transport"
                       description="Bus Services, School Transportation, Airport Shuttle Services, Tour & Charter Bus Operators, Ferries"
-                      to="/industry"
+                      to="/passanger-transport"
                      onClick={() => { closeDropdowns(); closeMenu(); }}
-                      isActive={location.pathname === '/industry2'}
+                      isActive={location.pathname === '/passanger-transport'}
                     />
                     <DropdownItem
                       title="Health Care"
                       description="Medical Equipment Transport, Pharmaceutical Distribution, Blood & Organ Transport Services"
-                      to="/industry"
+                      to="/health-care"
                      onClick={() => { closeDropdowns(); closeMenu(); }}
-                      isActive={location.pathname === '/industry3'}
+                      isActive={location.pathname === '/health-care'}
                     />
                      <DropdownItem
                       title="Agriculture"
                       description="Farming Operations Fleets, Precision Agriculture For Crop Management, Livestock Transportation"
-                      to="/industry"
+                      to="/agriculture"
                      onClick={() => { closeDropdowns(); closeMenu(); }}
-                      isActive={location.pathname === '/industry3'}
+                      isActive={location.pathname === '/agriculture'}
                     />
                      <DropdownItem
                       title="Construction"
                       description="Construction Companies, Excavation & Earthmoving, Equipment Rental Businesses"
-                      to="/industry"
+                      to="/construction"
                      onClick={() => { closeDropdowns(); closeMenu(); }}
-                      isActive={location.pathname === '/industry3'}
+                      isActive={location.pathname === '/construction'}
                     />
                      <DropdownItem
                       title="Trucking"
                       description="Freight Transportation & Logistics, Long-Haul Trucking, Local Delivery Services, Refrigerated Trucking"
-                      to="/industry"
+                      to="/trucking"
                      onClick={() => { closeDropdowns(); closeMenu(); }}
-                      isActive={location.pathname === '/industry3'}
+                      isActive={location.pathname === '/trucking'}
                     />
                      <DropdownItem
                       title="Security"
                       description="Cash Carry Vans, Secure Cargo Transport, Government & Military Transport"
-                      to="/industry"
+                      to="/security"
                      onClick={() => { closeDropdowns(); closeMenu(); }}
-                      isActive={location.pathname === '/industry3'}
+                      isActive={location.pathname === '/security'}
                     />
                   </div>
                 </div>
@@ -369,39 +372,39 @@ const Navbar = () => {
                   />
                    <DropdownItem
                     title="Passenger Transport"
-                    to="/industry1"
+                    to="/passanger-transport"
                     onClick={closeMenu}
-                    isActive={location.pathname === '/industry1'}
+                    isActive={location.pathname === '/passanger-transport'}
                   />
                    <DropdownItem
                     title="Health Care"
-                    to="/industry1"
+                    to="/health-care"
                     onClick={closeMenu}
-                    isActive={location.pathname === '/industry1'}
+                    isActive={location.pathname === '/health-care'}
                   />
                    <DropdownItem
                     title="Agriculture"
-                    to="/industry1"
+                    to="/agriculture"
                     onClick={closeMenu}
-                    isActive={location.pathname === '/industry1'}
+                    isActive={location.pathname === '/agriculture'}
                   />
                    <DropdownItem
                     title="Construction"
-                    to="/industry1"
+                    to="/construction"
                     onClick={closeMenu}
-                    isActive={location.pathname === '/industry1'}
+                    isActive={location.pathname === '/construction'}
                   />
                    <DropdownItem
                     title="Trucking"
-                    to="/industry1"
+                    to="/trucking"
                     onClick={closeMenu}
-                    isActive={location.pathname === '/industry1'}
+                    isActive={location.pathname === '/trucking'}
                   />
                    <DropdownItem
                     title="Security"
-                    to="/industry1"
+                    to="/security"
                     onClick={closeMenu}
-                    isActive={location.pathname === '/industry1'}
+                    isActive={location.pathname === '/security'}
                   />
                 </div>
               )}

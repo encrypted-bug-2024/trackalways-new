@@ -9,6 +9,12 @@ import Blog from './pages/BlogSection';
 import Media from './pages/Media.jsx';
 import Industry from './pages/Industries.jsx';
 import EnergyIndustry from './pages/EnergyIndustry.jsx';
+import Passanger from './pages/Passanger.jsx';
+import HealthCare from './pages/Healthcare.jsx';
+import Agriculture from './pages/Agriculture.jsx';
+import Construction from './pages/Construction.jsx';
+import Trucking from './pages/Trucking.jsx';
+import Security from './pages/Security.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
 import OpenLayout from './layout/OpenLayout.jsx';
 
@@ -28,6 +34,12 @@ function App() {
           <Route path="/media-coverage" element={<Media />} />
           <Route path="/industry" element={<Industry />} />
           <Route path="/energy-industry" element={<EnergyIndustry />} />
+          <Route path="/passanger-transport" element={<Passanger />} />
+          <Route path="/health-care" element={<HealthCare/>} />
+          <Route path="/agriculture" element={<Agriculture />} />
+          <Route path="/construction" element={<Construction />} />
+          <Route path="/trucking" element={<Trucking />} />
+          <Route path="/security" element={<Security />} />
         </Route>
 
         {/* 404 Page */}
