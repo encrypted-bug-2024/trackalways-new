@@ -36,7 +36,7 @@ const GetStartedSection = () => {
       <div className="max-w-lg text-center lg:text-left mb-6 lg:mb-0">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Let’s get started with TrackAlways</h2>
         <p className="text-sm sm:text-base leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ratione explicabo consectetur iste, exercitationem facere fugiat laudantium sed incidunt mollitia. Iusto, ratione sequi! Vel facere,
+          Experience seamless tracking and unmatched reliability with Track Always. From real-time monitoring to advanced analytics, we provide solutions that keep you in control. Get in touch with us today and discover how our technology can streamline your operations and boost your efficiency!"
         </p>
       </div>
 
