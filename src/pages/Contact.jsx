@@ -1,7 +1,8 @@
-  import React, { useState } from 'react';
-  import banner from '../assets/contact-banner.png';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  const Contact = () => {
+
+const Contact = () => {
     // State variables to store form data
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -13,17 +14,17 @@
     const [loading, setLoading] = useState(false);
 
     const validateForm = () => {
-      const errors = {};
-      if (!firstName.trim()) errors.firstName = 'First name is required';
-      if (!lastName.trim()) errors.lastName = 'Last name is required';
-      if (!email.trim()) errors.email = 'Email is required';
-      else if (!/\S+@\S+\.\S+/.test(email)) errors.email = 'Email is invalid';
-      if (!phone.trim()) errors.phone = 'Phone number is required in 10 digit';
-      if (!subject.trim()) errors.subject = 'Subject is required';
-      if (!message.trim()) errors.message = 'Message is required'; 
-      setErrors(errors);
-      return Object.keys(errors).length === 0;
-  };
+        const errors = {};
+        if (!firstName.trim()) errors.firstName = 'First name is required';
+        if (!lastName.trim()) errors.lastName = 'Last name is required';
+        if (!email.trim()) errors.email = 'Email is required';
+        else if (!/\S+@\S+\.\S+/.test(email)) errors.email = 'Email is invalid';
+        if (!phone.trim()) errors.phone = 'Phone number is required in 10 digit';
+        if (!subject.trim()) errors.subject = 'Subject is required';
+        if (!message.trim()) errors.message = 'Message is required';
+        setErrors(errors);
+        return Object.keys(errors).length === 0;
+    };
 
     const resetForm = () => {
         setFirstName('');
@@ -69,19 +70,24 @@
 
     return (
         <>
+            <Helmet>
+                <title>Contact Us - TrackAlways</title>
+                <meta name="description" content="Get in touch with TrackAlways! Reach out to us for inquiries, support, or partnership opportunities. We're here to help with all your tracking and operational needs." />
+            </Helmet>
+
 
             {/* Contact Section */}
             <div className="bg-black mt-20 p-4 md:p-8">
-        <div className="flex flex-col md:flex-row justify-between">
-          {/* Left Side - Headings and Paragraph */}
-          <div className="text-gray-300 md:w-1/2">
-            <h3 className="hidden md:hidden lg:block text-9xl mb-4">Contact Us</h3>
-            <h4 className="text-white text-4xl md:text-6xl mb-4">Talk to the team, we are here to help!</h4>
-            <p className="text-white text-sm md:text-base mb-4">
-              If you wish to contact us, fill in the form and we will get back
-              to you ASAP!
-            </p>
-          </div>
+                <div className="flex flex-col md:flex-row justify-between">
+                    {/* Left Side - Headings and Paragraph */}
+                    <div className="text-gray-300 md:w-1/2">
+                        <h3 className="hidden md:hidden lg:block text-9xl mb-4">Contact Us</h3>
+                        <h4 className="text-white text-4xl md:text-6xl mb-4">Talk to the team, we are here to help!</h4>
+                        <p className="text-white text-sm md:text-base mb-4">
+                            If you wish to contact us, fill in the form and we will get back
+                            to you ASAP!
+                        </p>
+                    </div>
                     <div className="md:w-1/2">
                         <form onSubmit={handleSubmit} className="bg-black p-6 rounded shadow-lg">
                             <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2">
@@ -155,7 +161,7 @@
                                         value={message}
                                         onChange={(e) => setMessage(e.target.value)}
                                     ></textarea>
-                                     {errors.message && <span className="text-red-500">{errors.message}</span>}
+                                    {errors.message && <span className="text-red-500">{errors.message}</span>}
                                 </div>
                             </div>
                             <button
@@ -169,23 +175,23 @@
                     </div>
                 </div>
             </div>
-  {/* Google Map Section */}
-  <div className="mt-20 mb-10 flex justify-center px-4 md:px-8 lg:px-16">
-    <div className="w-full max-w-8xl relative">
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7331.368520480632!2d77.451181!3d23.254574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43d9b6e83c7d%3A0xf49cec7f079ae3a9!2sTrackalways!5e0!3m2!1sen!2sin!4v1730700692795!5m2!1sen!2sin"
-        width="100%"
-        height="450"
-        className="rounded-lg shadow-lg mb-8"
-        allowFullScreen=""
-        loading="lazy"
-        title="TrackAlways- Yasoda Garden Bagnugaliya, Bhopal"
-      ></iframe>
-    </div>
-  </div>
+            {/* Google Map Section */}
+            <div className="mt-20 mb-10 flex justify-center px-4 md:px-8 lg:px-16">
+                <div className="w-full max-w-8xl relative">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7331.368520480632!2d77.451181!3d23.254574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43d9b6e83c7d%3A0xf49cec7f079ae3a9!2sTrackalways!5e0!3m2!1sen!2sin!4v1730700692795!5m2!1sen!2sin"
+                        width="100%"
+                        height="450"
+                        className="rounded-lg shadow-lg mb-8"
+                        allowFullScreen=""
+                        loading="lazy"
+                        title="TrackAlways- Yasoda Garden Bagnugaliya, Bhopal"
+                    ></iframe>
+                </div>
+            </div>
 
-      </>
+        </>
     );
-  };
+};
 
-  export default Contact;
+export default Contact;

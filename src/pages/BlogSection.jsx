@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import banner from '../assets/blog.png';
+import { Helmet } from 'react-helmet-async';
 
 const BlogSection = () => {
   const [blogData, setBlogData] = useState([]);
@@ -42,6 +43,11 @@ const BlogSection = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Blog - TrackAlways</title>
+        <meta name="description" content="Stay updated with the latest news, insights, and expert tips from TrackAlways. Our blog covers industry trends, product updates, and strategies to help you optimize your operations." />
+      </Helmet>
+
       <div className="relative">
         <nav className="bg-gray-800 text-white p-4">
           <h1 className="text-xl">My Website</h1>
@@ -49,10 +55,10 @@ const BlogSection = () => {
 
         {/* Banner Section */}
         <div className="w-full h-[350px] md:h-[300px] overflow-hidden relative">
-          <img 
-            src={banner} 
-            alt="Banner" 
-            className="absolute inset-0 w-full h-full object-fit" 
+          <img
+            src={banner}
+            alt="Banner"
+            className="absolute inset-0 w-full h-full object-fit"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-50">
             <h2 className="text-3xl mt-8 md:text-8xl">Blogs</h2>
@@ -113,9 +119,8 @@ const BlogSection = () => {
               <button
                 key={index}
                 onClick={() => handlePageChange(index + 1)}
-                className={`px-3 py-1 rounded ${
-                  currentPage === index + 1 ? 'bg-[#439600] text-white' : 'bg-[#439600]/50'
-                }`}
+                className={`px-3 py-1 rounded ${currentPage === index + 1 ? 'bg-[#439600] text-white' : 'bg-[#439600]/50'
+                  }`}
               >
                 {index + 1}
               </button>
@@ -124,9 +129,8 @@ const BlogSection = () => {
             <button
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage >= totalPages}
-              className={`px-3 py-1 rounded ${
-                currentPage < totalPages ? 'bg-[#439600] text-white' : 'bg-[#439600]/50 text-white cursor-not-allowed'
-              }`}
+              className={`px-3 py-1 rounded ${currentPage < totalPages ? 'bg-[#439600] text-white' : 'bg-[#439600]/50 text-white cursor-not-allowed'
+                }`}
             >
               Next
             </button>

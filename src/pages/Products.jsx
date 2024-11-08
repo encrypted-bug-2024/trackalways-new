@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import banner from '../assets/product-banner.png';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
@@ -40,6 +41,11 @@ const Product = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Products - TrackAlways</title>
+        <meta name="description" content="Explore our range of innovative products designed to help you track and manage your operations efficiently." />
+      </Helmet>
+
       <div className="relative">
         <nav className="bg-gray-800 text-white p-4">
           <h1 className="text-xl">My Website</h1>
@@ -121,7 +127,7 @@ const Product = () => {
               {index + 1}
             </button>
           ))}
-          
+
           {/* Next Button */}
           {currentPage < Math.ceil(filteredProducts.length / productsPerPage) && (
             <button

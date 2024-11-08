@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FaStar } from 'react-icons/fa';
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { Link, useParams } from 'react-router-dom';
@@ -84,6 +85,11 @@ const ProductDetail = () => {
   if (!product) return <p>Loading...</p>;
 
   return (
+    <>
+     <Helmet>
+        <title>ProductDetails - TrackAlways</title>
+        <meta name="description" content="Explore our range of innovative products designed to help you track and manage your operations efficiently." />
+      </Helmet>
     <div className="mt-40 px-4 md:px-10 lg:px-20">
       <div className="flex flex-col md:flex-col lg:flex-row items-start gap-6">
        {/* Thumbnails */}
@@ -232,6 +238,7 @@ const ProductDetail = () => {
       </div>
 
     </div>
+    </>
   );
 };
 

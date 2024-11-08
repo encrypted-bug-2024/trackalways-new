@@ -1,14 +1,20 @@
 import React from 'react';
 import banner from '../assets/industry.png';
+import { Helmet } from 'react-helmet-async';
 import rightVideo from '../assets/earth.mp4';
 import { FaArrowRight, FaBolt, FaChartLine, FaRecycle, FaWater } from 'react-icons/fa';
-import additionalImage1 from '../assets/report 1.png'; 
+import additionalImage1 from '../assets/report 1.png';
 import additionalImage2 from '../assets/report 2.png';
 import additionalImage3 from '../assets/report 3.png';
 
 const EnergyIndustries = () => {
   return (
     <>
+      <Helmet>
+        <title>Energy Industries - TrackAlways</title>
+        <meta name="description" content="Explore TrackAlways' solutions tailored for the energy industry. Learn how we help optimize energy operations, improve efficiency, and support sustainability goals with innovative tracking technologies." />
+      </Helmet>
+
       <div className="relative">
         <nav className="bg-gray-800 text-white p-4">
           <h1 className="text-xl">My Website</h1>
@@ -88,58 +94,58 @@ const EnergyIndustries = () => {
       </div>
 
       {/* New Section with Alternating Layout */}
-<div className="px-4 md:px-20 py-12 text-center">
-  <h2 className="text-4xl font-bold mb-4">Features of Employee Management System</h2>
-  <p className="text-gray-700 mb-12">
-    Here's why our employee management stand out from the rest
-  </p>
+      <div className="px-4 md:px-20 py-12 text-center">
+        <h2 className="text-4xl font-bold mb-4">Features of Employee Management System</h2>
+        <p className="text-gray-700 mb-12">
+          Here's why our employee management stand out from the rest
+        </p>
 
-  {/* Row 1 */}
-  <div className="flex flex-col md:flex-row items-center mb-8">
-    <img
-      src={additionalImage1}
-      alt="Enhancement 1"
-      className="md:w-2/5 rounded-lg mb-6 md:mb-0 md:mr-10"  
-    />
-    <div className="md:w-2/3 text-left">
-      <h3 className="text-3xl font-bold mb-2">Expense Reports</h3>
-      <p className="text-gray-700">
-        They help you stay on top of company expenditures. Keep track of your employee's expenses and facilitate easy reimbursement. By checking on fuel or a business trip's expenses, you can avoid financial discord. Upload receipts or invoices for ultimate transparency.
-      </p>
-    </div>
-  </div>
+        {/* Row 1 */}
+        <div className="flex flex-col md:flex-row items-center mb-8">
+          <img
+            src={additionalImage1}
+            alt="Enhancement 1"
+            className="md:w-2/5 rounded-lg mb-6 md:mb-0 md:mr-10"
+          />
+          <div className="md:w-2/3 text-left">
+            <h3 className="text-3xl font-bold mb-2">Expense Reports</h3>
+            <p className="text-gray-700">
+              They help you stay on top of company expenditures. Keep track of your employee's expenses and facilitate easy reimbursement. By checking on fuel or a business trip's expenses, you can avoid financial discord. Upload receipts or invoices for ultimate transparency.
+            </p>
+          </div>
+        </div>
 
-  {/* Row 2 */}
-  <div className="flex flex-col md:flex-row items-center mb-8">
-    <div className="md:w-2/3 text-left md:order-1 order-2">
-      <h3 className="text-3xl font-bold mb-2">Live-tracking and ETAs</h3>
-      <p className="text-gray-700">
-        Do you have trouble keeping track of your teams when they work remotely? Track employees in real-time and collaborate better. Getting your crews on the job sites in good time is essential for customer satisfaction. Never make your customers wait!
-      </p>
-      <p className="text-gray-700">Share live ETAs and notify them ahead of time in case of delays or cancellations.</p>
-    </div>
-    <img
-      src={additionalImage2}
-      alt="Enhancement 2"
-      className="md:w-2/5 rounded-lg mb-6 md:mb-0 md:ml-10 order-1 md:order-2"  
-    />
-  </div>
+        {/* Row 2 */}
+        <div className="flex flex-col md:flex-row items-center mb-8">
+          <div className="md:w-2/3 text-left md:order-1 order-2">
+            <h3 className="text-3xl font-bold mb-2">Live-tracking and ETAs</h3>
+            <p className="text-gray-700">
+              Do you have trouble keeping track of your teams when they work remotely? Track employees in real-time and collaborate better. Getting your crews on the job sites in good time is essential for customer satisfaction. Never make your customers wait!
+            </p>
+            <p className="text-gray-700">Share live ETAs and notify them ahead of time in case of delays or cancellations.</p>
+          </div>
+          <img
+            src={additionalImage2}
+            alt="Enhancement 2"
+            className="md:w-2/5 rounded-lg mb-6 md:mb-0 md:ml-10 order-1 md:order-2"
+          />
+        </div>
 
-  {/* Row 3 */}
-  <div className="flex flex-col md:flex-row items-center">
-    <img
-      src={additionalImage3}
-      alt="Enhancement 3"
-      className="md:w-2/5 rounded-lg mb-6 md:mb-0 md:mr-10"  
-    />
-    <div className="md:w-2/3 text-left">
-      <h3 className="text-3xl font-bold mb-2">Job Module</h3>
-      <p className="text-gray-700">
-        Automate and monitor employee task assignments. The job module keeps you updated with completed tasks and missed tasks. Check up on your employees when they've missed a designated task and resolve issues preemptively.
-      </p>
-    </div>
-  </div>
-</div>
+        {/* Row 3 */}
+        <div className="flex flex-col md:flex-row items-center">
+          <img
+            src={additionalImage3}
+            alt="Enhancement 3"
+            className="md:w-2/5 rounded-lg mb-6 md:mb-0 md:mr-10"
+          />
+          <div className="md:w-2/3 text-left">
+            <h3 className="text-3xl font-bold mb-2">Job Module</h3>
+            <p className="text-gray-700">
+              Automate and monitor employee task assignments. The job module keeps you updated with completed tasks and missed tasks. Check up on your employees when they've missed a designated task and resolve issues preemptively.
+            </p>
+          </div>
+        </div>
+      </div>
 
 
     </>

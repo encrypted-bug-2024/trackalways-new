@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import banner from '../assets/career.jpg';
 import { FaArrowRight } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 
 const Career = () => {
   const [activeForm, setActiveForm] = useState('internship');
@@ -105,6 +106,11 @@ const Career = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Careers - TrackAlways</title>
+        <meta name="description" content="Join the TrackAlways team! Explore exciting career opportunities, our company culture, and how we empower our employees to grow and innovate in a dynamic environment." />
+      </Helmet>
+
       <div className="relative">
         <nav className="bg-gray-800 text-white p-4">
           <h1 className="text-xl">My Website</h1>
