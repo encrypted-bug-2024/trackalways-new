@@ -6,7 +6,7 @@ import { Toaster } from "react-hot-toast";
 import { HelmetProvider } from 'react-helmet-async'; // Import HelmetProvider
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/">
     <HelmetProvider> {/* Wrap App with HelmetProvider */}
       <App />
       <Toaster />

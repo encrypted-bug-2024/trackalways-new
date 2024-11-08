@@ -17,12 +17,12 @@ import Trucking from './pages/Trucking.jsx';
 import Security from './pages/Security.jsx';
 import PageNotFound from './pages/PageNotFound.jsx';
 import OpenLayout from './layout/OpenLayout.jsx';
-import GoogleAnalytics from './components/GoogleAnalytics'; 
+// import GoogleAnalytics from './components/GoogleAnalytics'; 
 
 function App() {
   return (
     <>
-      <GoogleAnalytics /> 
+      {/* <GoogleAnalytics />  */}
       
       <Routes>
         {/* Public Routes */}
