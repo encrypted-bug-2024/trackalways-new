@@ -23,7 +23,7 @@ const GoogleAnalytics = () => {
 
     // Track page view
     if (window.gtag) {
-      gtag('config', 'G-6905QHTZQG', {
+      window.gtag('config', 'G-6905QHTZQG', {
         page_path: location.pathname + location.search,
       });
     }

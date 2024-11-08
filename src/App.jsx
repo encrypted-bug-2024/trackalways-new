@@ -22,8 +22,8 @@ import GoogleAnalytics from './components/GoogleAnalytics';
 function App() {
   return (
     <>
-      <GoogleAnalytics /> {/* This will load GA on every page */}
-
+      <GoogleAnalytics /> 
+      
       <Routes>
         {/* Public Routes */}
         <Route path="/" element={<OpenLayout />}>
