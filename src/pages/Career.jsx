@@ -4,15 +4,15 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const Career = () => {
   const [activeForm, setActiveForm] = useState('internship');
-//   name: Deepak Kumar
-// mobile: 9310142074
-// email: leo.deepak25@gmail.com
-// college_name: Dpg
-// course: Bca
-// specialization: CS
-// batch: 2024
-// resume: (binary)
-// message: Hi
+  //   name: Deepak Kumar
+  // mobile: 9310142074
+  // email: leo.deepak25@gmail.com
+  // college_name: Dpg
+  // course: Bca
+  // specialization: CS
+  // batch: 2024
+  // resume: (binary)
+  // message: Hi
 
   const [formData, setFormData] = useState({
     name: '',
@@ -30,78 +30,77 @@ const Career = () => {
   const [error, setError] = useState('');
 
   // Update handleChange to show file name if selected
-const handleChange = (e) => {
-  const { name, value, type, files } = e.target;
-  setFormData((prev) => ({
-    ...prev,
-    [name]: type === 'file' ? files[0] : value,
-  }));
+  const handleChange = (e) => {
+    const { name, value, type, files } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'file' ? files[0] : value,
+    }));
 
-  if (type === 'file' && files[0]) {
-    alert(`Selected file: ${files[0].name}`);
-  }
-};
-
-// Conditionally set the API endpoint based on activeForm
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
-  setError('');
-
-  const formPayload = new FormData();
-  if(activeForm === 'internship')
-  {
-      for (const key in formData) {
-      if(key=="job_profile" &&  activeForm === 'internship')
-      continue
-      formPayload.append(key, formData[key]);
+    if (type === 'file' && files[0]) {
+      alert(`Selected file: ${files[0].name}`);
     }
-  }
-  else{
-    const formData2 = {
-      name: formData["name"],
-      mobile: formData["mobile"],
-      email: formData["email"],
-      job_profile: formData["job_profile"], // This can be either "Developer" or "job"
-      resume: formData["resume"],
-      message: formData["message"]
   };
+
+  // Conditionally set the API endpoint based on activeForm
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+
+    const formPayload = new FormData();
+    if (activeForm === 'internship') {
+      for (const key in formData) {
+        if (key == "job_profile" && activeForm === 'internship')
+          continue
+        formPayload.append(key, formData[key]);
+      }
+    }
+    else {
+      const formData2 = {
+        name: formData["name"],
+        mobile: formData["mobile"],
+        email: formData["email"],
+        job_profile: formData["job_profile"], // This can be either "Developer" or "job"
+        resume: formData["resume"],
+        message: formData["message"]
+      };
       for (const key in formData2) {
         formPayload.append(key, formData2[key]);
+      }
     }
-  }
 
-  try {
-    const endpoint = activeForm === 'internship' ? 
-      'http://localhost:8080/v1/apis/apply/internship' : 
-      'http://localhost:8080/v1/apis/apply/job';
+    try {
+      const endpoint = activeForm === 'internship' ?
+        'http://localhost:8080/v1/apis/apply/internship' :
+        'http://localhost:8080/v1/apis/apply/job';
 
-    const response = await fetch(endpoint, {
-      method: 'POST',
-      body: formPayload,
-    });
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        body: formPayload,
+      });
 
-    if (!response.ok) throw new Error('Failed to submit the form');
+      if (!response.ok) throw new Error('Failed to submit the form');
 
-    setFormData({
-      name: '',
-      email: '',
-      mobile: '',
-      college_name: '',
-      course: '',
-      specialization: '',
-      batch: '',
-      job_profile: '',
-      resume: null,
-      message: '',
-    });
-    alert('Form submitted successfully!');
-  } catch (error) {
-    setError(error.message);
-  } finally {
-    setLoading(false);
-  }
-};
+      setFormData({
+        name: '',
+        email: '',
+        mobile: '',
+        college_name: '',
+        course: '',
+        specialization: '',
+        batch: '',
+        job_profile: '',
+        resume: null,
+        message: '',
+      });
+      alert('Form submitted successfully!');
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
 
   return (
@@ -254,7 +253,7 @@ const handleSubmit = async (e) => {
                 />
                 <label
                   htmlFor="uploadResume"
-                  className="bg-black text-white py-4 px-6 rounded cursor-pointer w-40 hover:bg-opacity-90"
+                  className="bg-black text-white py-4 px-6 rounded cursor-pointer w-40 hover:bg-opacity-90 flex items-center justify-center"
                 >
                   Browse...
                 </label>
@@ -341,26 +340,26 @@ const handleSubmit = async (e) => {
 
               {/* Upload Resume for Job */}
               <div className="flex flex-col justify-end">
-  <label className="text-lg font-semibold mb-1 text-gray-600">Upload Resume*</label>
-  <input
-    type="file"
-    name="resume"
-    onChange={handleChange}
-    className="hidden"
-    id="uploadResume"
-    required
-  />
-  <label
-    htmlFor="uploadResume"
-    className="bg-black text-white py-4 px-6 rounded cursor-pointer w-40 hover:bg-opacity-90"
-  >
-    Browse...
-  </label>
-  {formData.resume && (
-    <p className="text-gray-600 mt-2">{formData.resume.name}</p>
-  )}
-</div>
-</div>
+                <label className="text-lg font-semibold mb-1 text-gray-600">Upload Resume*</label>
+                <input
+                  type="file"
+                  name="resume"
+                  onChange={handleChange}
+                  className="hidden"
+                  id="uploadResume"
+                  required
+                />
+                <label
+                  htmlFor="uploadResume"
+                  className="bg-black text-white py-4 px-6 rounded cursor-pointer w-40 hover:bg-opacity-90 flex items-center justify-center"
+                >
+                  Browse...
+                </label>
+                {formData.resume && (
+                  <p className="text-gray-600 mt-2">{formData.resume.name}</p>
+                )}
+              </div>
+            </div>
 
             {/* Message Textarea */}
             <div className="flex flex-col">
