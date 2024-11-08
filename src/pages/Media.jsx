@@ -29,12 +29,7 @@ const Media = () => {
       </div>
 
       {/* Main Content Section */}
-      <div className="p-0 mt-14 max-w-7xl mx-auto space-y-8">
-
-        {/* Top Section: Large News Coverage */}
-        <div className="bg-white mb-24 shadow-lg rounded-lg overflow-hidden">
-          <img src={largeNewsImage} alt="Main News Coverage" className="w-full h-auto" />
-        </div>
+      <div className="p-0 mt-14 max-w-8xl mx-auto space-y-8">
 
         {/* Bottom Section: Full-Width Black Background */}
         <div className="bg-black py-10">
@@ -47,10 +42,17 @@ const Media = () => {
 
               {/* Right column: m2 and m3 on top, m4 on bottom */}
               <div className="col-span-2 grid grid-cols-2 gap-4">
-                <img src={newsImage2} alt="News Coverage 2" className="w-full h-auto rounded-lg shadow-md" />
-                <img src={newsImage3} alt="News Coverage 3" className="w-full h-auto rounded-lg shadow-md" />
-                <img src={newsImage4} alt="News Coverage 4" className="col-span-2 w-full h-auto rounded-lg shadow-md" />
+                <img src={largeNewsImage} alt="Main News Coverage" className="col-span-2 w-full h-auto rounded-lg shadow-md" />
+                <img src={newsImage4} alt="News Coverage 4" className="col-span-2 w-full h-auto md:h-[550px] lg:h-[825px] rounded-lg shadow-md" />
               </div>
+              <div className="col-span-3 grid grid-cols-2 gap-4">
+                {/* First Image (Side by Side) */}
+                <img src={newsImage2} alt="Main News Coverage" className="w-full h-auto rounded-lg shadow-md" />
+
+                {/* Second Image (Spans Full Width of the Row) */}
+                <img src={newsImage3} alt="News Coverage 4" className=" w-full object-contain rounded-lg shadow-md" />
+              </div>
+
             </div>
           </div>
         </div>
