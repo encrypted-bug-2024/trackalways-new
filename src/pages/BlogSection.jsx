@@ -48,7 +48,7 @@ const BlogSection = () => {
         </nav>
 
         {/* Banner Section */}
-        <div className="w-full h-[350px] md:h-[550px] overflow-hidden relative">
+        <div className="w-full h-[350px] md:h-[300px] overflow-hidden relative">
           <img 
             src={banner} 
             alt="Banner" 

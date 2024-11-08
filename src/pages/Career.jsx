@@ -112,7 +112,7 @@ const handleSubmit = async (e) => {
         </nav>
 
         {/* Banner Image */}
-        <div className="w-full h-[40vh] md:h-[50vh] lg:h-[550px]">
+        <div className="w-full h-[40vh] md:h-[50vh] lg:h-[300px]">
           <img
             src={banner}
             alt="Banner"

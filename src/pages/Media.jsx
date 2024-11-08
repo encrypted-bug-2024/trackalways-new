@@ -14,7 +14,7 @@ const Media = () => {
   </nav>
 
   {/* Banner Image */}
-  <div className="w-full h-[40vh] md:h-[50vh] lg:h-[550px]">
+  <div className="w-full h-[40vh] md:h-[50vh] lg:h-[300px]">
     <img src={banner} alt="Banner" className="w-full h-full object-cover" />
     <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-50">
       <h2 className="text-3xl mt-8 md:text-8xl">Media Coverage</h2>
