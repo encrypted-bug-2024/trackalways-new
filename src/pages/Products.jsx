@@ -13,13 +13,21 @@ const Product = () => {
 
   // Fetch products data
   useEffect(() => {
-    fetch('/products.json')
-      .then(res => res.json())
+    // Ensure you're fetching products.json from the correct location
+    fetch('/products.json')  // Make sure products.json is in the public folder
+      .then(res => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json();
+      })
       .then(data => {
         setProducts(data);
         setFilteredProducts(data); // Initialize with all products
       })
-      .catch(err => console.error(err));
+      .catch(err => {
+        console.error('Error fetching products:', err);
+      });
   }, []);
 
   // Filter products based on search term
@@ -57,6 +65,7 @@ const Product = () => {
             src={banner}
             alt="Banner"
             className="w-full h-full object-cover"
+            loading="lazy"  // Lazy loading for banner image
           />
 
           {/* Centered Text */}
@@ -98,6 +107,7 @@ const Product = () => {
                 src={product.image}
                 alt={product.name}
                 className="bg-white w-full h-[70%] object-cover"
+                loading="lazy"  // Lazy loading for product images
               />
               <div className="flex-grow p-4 flex flex-col justify-between">
                 <h2 className="text-white text-xl font-semibold">{product.name}</h2>
