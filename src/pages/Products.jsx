@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import banner from '../assets/product-banner.png';
+import banner from '../assets/product-banner-reduced.jpg';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
@@ -99,32 +99,35 @@ const Product = () => {
           </div>
         </div>
 
-        {/* Products */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 gap-6">
-          {currentProducts.map(product => (
-            <div key={product.id} className="border-2 border-black rounded-2xl shadow-md bg-[#439600] overflow-hidden flex flex-col mb-4">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="bg-white w-full h-[70%] object-cover"
-                loading="lazy"  // Lazy loading for product images
-              />
-              <div className="flex-grow p-4 flex flex-col justify-between">
-                <h2 className="text-white text-xl font-semibold">{product.name}</h2>
-                <p className="text-white mt-2 mb-2">TrackAlways</p>
+       {/* Products */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3 gap-6">
+  {currentProducts.map(product => (
+    <div key={product.id} className="border-2 border-black rounded-2xl shadow-md bg-[#439600] overflow-hidden flex flex-col items-center mb-4">
+      <div className="w-full h-[70%] flex items-center justify-center bg-white">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="object-contain max-h-full"
+          loading="lazy"  // Lazy loading for product images
+        />
+      </div>
+      <div className="flex-grow p-4 flex flex-col justify-between">
+        <h2 className="text-white text-xl font-semibold">{product.name}</h2>
+        <p className="text-white mt-2 mb-2">TrackAlways</p>
 
-                {/* Horizontal line */}
-                <div className="border-t border-gray-300 my-2"></div>
+        {/* Horizontal line */}
+        <div className="border-t border-gray-300 my-2"></div>
 
-                {/* See Now Button */}
-                <Link to={`/product/${product.id}`} className="flex items-center justify-center text-white py-2 rounded-lg mt-2">
-                  <span className="mr-2">See Now</span>
-                  <FaArrowRight className="ml-1 w-6" />
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* See Now Button */}
+        <Link to={`/product/${product.id}`} className="flex items-center justify-center text-white py-2 rounded-lg mt-2">
+          <span className="mr-2">See Now</span>
+          <FaArrowRight className="ml-1 w-6" />
+        </Link>
+      </div>
+    </div>
+  ))}
+</div>
+
 
         {/* Pagination */}
         <div className="mt-6 mb-16 flex justify-center">

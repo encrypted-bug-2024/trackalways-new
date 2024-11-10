@@ -2,14 +2,14 @@
   {
     "id": 1,
     "name": "OBD Tracker",
-    "image": "/products/product1.png",
+    "image": "../src/assets/products/product1.png",
     "images": [
-      "/products/product1.png",
-      "/products/product1a.png",
-      "/products/product1b.png",
-      "/products/product1c.png",
-      "/products/product1d.png",
-      "/products/product1e.png"
+      "../src/assets/products/product1.png",
+      "../src/assets/products/product1a.png",
+      "../src/assets/products/product1b.png",
+      "../src/assets/products/product1c.png",
+      "../src/assets/products/product1d.png",
+      "../src/assets/products/product1e.png"
     ],
     "detail": "TrackAlways (Remote Engine Lock) - Wired Hidden GPS Tracker with Location Tracking, Geo Fence Alert, More 15+ Features for Car, Bike, Truck, Bus with (1 Year Free Premium App)",
     "detail1": "Package: GPS Device (Lite) + 12V Relay + 1 year free app subscription + 1 year replacement warranty ",
@@ -23,14 +23,14 @@
   {
     "id": 2,
     "name": "Vehicle 4G Tracker",
-    "image": "/products/product2.png",
+    "image": "../src/assets/products/product2.png",
     "images": [
-      "/products/product2.png",
-      "/products/product2a.png",
-      "/products/product2b.png",
-      "/products/product2c.png",
-      "/products/product2d.png",
-      "/products/product2e.png"
+      "../src/assets/products/product2.png",
+      "../src/assets/products/product2a.png",
+      "../src/assets/products/product2b.png",
+      "../src/assets/products/product2c.png",
+      "../src/assets/products/product2d.png",
+      "../src/assets/products/product2e.png"
     ],
     "detail": "Track Always AI-Based Smart 4G Tracker for Vehicles & Personal Use, Real-Time Location, Geo-Fencing, Alerts, Route History",
     "detail1": "Real-Time Tracking: Gain complete visibility over your vehicle or asset with this AI-based smart GPS tracker that provides real-time location updates.",
@@ -44,14 +44,14 @@
   {
     "id": 3,
     "name": "Vehicle Tracker Lite",
-    "image": "/products/product3.png",
+    "image": "../src/assets/products/product3.png",
     "images": [
-      "/products/product3.png",
-      "/products/product3a.png",
-      "/products/product3b.png",
-      "/products/product3c.png",
-      "/products/product3d.png",
-      "/products/product3e.png"
+      "../src/assets/products/product3.png",
+      "../src/assets/products/product3a.png",
+      "../src/assets/products/product3b.png",
+      "../src/assets/products/product3c.png",
+      "../src/assets/products/product3d.png",
+      "../src/assets/products/product3e.png"
     ],
     "detail": "TrackAlways (Remote Engine Lock) - Wired Hidden GPS Tracker with Location Tracking, Geo Fence Alert, More 15+ Features for Car, Bike, Truck, Bus with (1 Year Free Premium App)",
     "detail1": "Package: GPS Device (Lite) + 12V Relay + 1 year free app subscription + 1 year",
@@ -65,14 +65,14 @@
   {
     "id": 4,
     "name": "Wireless Tracker 6000",
-    "image": "/products/product4.png",
+    "image": "../src/assets/products/product4.png",
     "images": [
-      "/products/product4.png",
-      "/products/product4a.png",
-      "/products/product4b.png",
-      "/products/product4c.png",
-      "/products/product4d.png",
-      "/products/product4e.png"
+      "../src/assets/products/product4.png",
+      "../src/assets/products/product4a.png",
+      "../src/assets/products/product4b.png",
+      "../src/assets/products/product4c.png",
+      "../src/assets/products/product4d.png",
+      "../src/assets/products/product4e.png"
     ],
     "detail": "The Wireless Tracker 6000 is a cutting-edge, compact power bank that ensures you never have to worry about running out of battery. Ideal for travelers, students, and professionals, it supports fast charging and is compatible with multiple devices.",
     "detail1": "Equipped with 10,000mAh of power, the Tracker 6000 can fully charge most smartphones up to three times on a single charge. Its sleek design is crafted for portability, making it easy to slip into any bag or pocket.",
@@ -86,14 +86,14 @@
   {
     "id": 5,
     "name": "Wireless Tracker 10000",
-    "image": "/products/product5.png",
+    "image": "../src/assets/products/product5.png",
     "images": [
-      "/products/product5.png",
-      "/products/product5a.png",
-      "/products/product5b.png",
-      "/products/product5c.png",
-      "/products/product5d.png",
-      "/products/product5e.png"
+      "../src/assets/products/product5.png",
+      "../src/assets/products/product5a.png",
+      "../src/assets/products/product5b.png",
+      "../src/assets/products/product5c.png",
+      "../src/assets/products/product5d.png",
+      "../src/assets/products/product5e.png"
     ],
     "detail": "Introducing the Wireless Tracker 10000, a cutting-edge Bluetooth tracker designed to help you keep track of your valuables effortlessly. Its sleek, compact design makes it easy to attach to keys, bags, or anything you don't want to lose.",
     "detail1": "Equipped with advanced GPS technology, the Wireless Tracker 10000 provides real-time location updates, ensuring you can always find your essentials. The user-friendly mobile app allows you to monitor your items with ease.",
