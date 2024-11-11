@@ -11,6 +11,11 @@ const Product = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 8;
 
+  const handleClick = () => {
+    window.scrollTo(0, 0); // Scroll to top of the page
+  };
+
+
   // Fetch products data
   useEffect(() => {
     // Ensure you're fetching products.json from the correct location
@@ -119,7 +124,7 @@ const Product = () => {
         <div className="border-t border-gray-300 my-2"></div>
 
         {/* See Now Button */}
-        <Link to={`/product/${product.id}`} className="flex items-center justify-center text-white py-2 rounded-lg mt-2">
+        <Link to={`/product/${product.id}`} onClick={handleClick} className="flex items-center justify-center text-white py-2 rounded-lg mt-2">
           <span className="mr-2">See Now</span>
           <FaArrowRight className="ml-1 w-6" />
         </Link>
