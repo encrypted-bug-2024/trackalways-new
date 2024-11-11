@@ -1,12 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import newImage from '../../assets/product.webp';
-import search from '../../assets/search.svg';
+import search from '../../assets/icon-animated.gif';
 import { Link } from 'react-router-dom';
 
 const Track = () => {
   const sectionRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
+
+  const handleBookDemoClick = () => {
+    // Scroll to the top before navigating
+    window.scrollTo(0, 0);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,14 +40,13 @@ const Track = () => {
     <>
       <section
         ref={sectionRef}
-        className="flex flex-col my-10 md:my-20 items-center justify-between w-11/12 mx-auto bg-white p-5 rounded-lg md:flex-row lg:flex-row"
+        className="flex flex-col my-10 md:my-20 items-center justify-between w-11/12 mx-auto bg-white p-5 rounded-lg md:flex-col lg:flex-row"
       >
         <div
-          className={`flex-2 flex flex-col items-center md:items-start ${
-            hasAnimated ? 'animate-left-content' : 'hidden-content'
-          }`}
+          className={`flex-2 flex flex-col items-center md:items-center lg:items-start ${hasAnimated ? 'animate-left-content' : 'hidden-content'
+            }`}
         >
-          <h2 className="font-bold text-2xl md:text-4xl lg:text-6xl mb-6 text-center md:text-left lg:text-left">
+          <h2 className="font-bold text-2xl md:text-4xl lg:text-6xl mb-6 text-center md:text-center lg:text-left">
             Increase fleet visibility with our vehicle tracking app.
           </h2>
 
@@ -62,26 +66,25 @@ const Track = () => {
             />
           </div>
 
-          <p className="text-base md:text-lg mb-6 text-center md:text-left lg:text-left px-4 md:px-0">
+          <p className="text-base md:text-lg mb-6 text-center md:text-center lg:text-left px-4 md:px-0">
             See in near real-time a 360-degree view of your fleet's daily operations,
             helping you reduce costs, increase productivity, and stay on top of vehicle
             maintenance—allowing you to focus on running your business.
           </p>
 
-          <div className="flex justify-center md:justify-start lg:justify-start mt-1">
-            <Link to='/contact-us'>
-            <button className="bg-white text-[#439600] border border-[#439600] font-semibold px-8 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 flex items-center justify-center">
-              BOOK A DEMO
-              <FaArrowRight className="ml-2" />
-            </button>
+          <div className="flex justify-center md:justify-center lg:justify-start mt-1">
+            <Link to='/contact-us' onClick={handleBookDemoClick}>
+              <button className="bg-white text-[#439600] border border-[#439600] font-semibold px-8 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 flex items-center justify-center">
+                BOOK A DEMO
+                <FaArrowRight className="ml-2" />
+              </button>
             </Link>
           </div>
         </div>
 
         <div
-          className={`flex-1 flex justify-center mt-4 md:mt-0 relative ${
-            hasAnimated ? 'animate-right-content' : 'hidden-content'
-          }`}
+          className={`flex-1 flex justify-center mt-4 md:mt-0 relative ${hasAnimated ? 'animate-right-content' : 'hidden-content'
+            }`}
         >
           <img
             src={newImage}
@@ -92,7 +95,7 @@ const Track = () => {
           <img
             src={search}
             alt="Logo"
-            className="absolute bottom-4 right-12 md:right-33 max-w-[50px] h-auto hidden md:block"
+            className="absolute logo-position max-w-[50px] left-[52px] bottom-[213px] md:left-[147px] md:bottom-[148px] lg:left-[455px] lg:-bottom-[50px] md:max-w-[100px] lg:max-w-[150px] h-auto"
           />
         </div>
       </section>

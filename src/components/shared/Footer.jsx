@@ -39,34 +39,34 @@ const Footer = () => {
 
             {/* Social Media Icons centered below the input field */}
             <div className="flex space-x-4 mt-4">
-  <a
-    href="https://www.facebook.com/trackalways"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Facebook"
-    className="text-gray-600 hover:text-black"
-  >
-    <FaFacebookF size={20} />
-  </a>
-  <a
-    href="https://www.linkedin.com/company/trackalways/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Linkedin"
-    className="text-gray-600 hover:text-black"
-  >
-    <FaLinkedin size={20} />
-  </a>
-  <a
-    href="https://www.instagram.com/trackalwaysindia/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-    className="text-gray-600 hover:text-black"
-  >
-    <FaInstagram size={20} />
-  </a>
-</div>
+              <a
+                href="https://www.facebook.com/trackalways"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-gray-600 hover:text-black"
+              >
+                <FaFacebookF size={20} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/trackalways/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Linkedin"
+                className="text-gray-600 hover:text-black"
+              >
+                <FaLinkedin size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/trackalwaysindia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-gray-600 hover:text-black"
+              >
+                <FaInstagram size={20} />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -135,33 +135,33 @@ const Footer = () => {
 
             {/* Social Media Icons */}
             <div className="flex space-x-4 lg:hidden">
-            <a
-    href="https://www.facebook.com/trackalways"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Facebook"
-    className="text-gray-600 hover:text-black"
-  >
-    <FaFacebookF size={20} />
-  </a>
-  <a
-    href="https://www.linkedin.com/company/trackalways/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Linkedin"
-    className="text-gray-600 hover:text-black"
-  >
-    <FaLinkedin size={20} />
-  </a>
-  <a
-    href="https://www.instagram.com/trackalwaysindia/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-    className="text-gray-600 hover:text-black"
-  >
-    <FaInstagram size={20} />
-  </a>
+              <a
+                href="https://www.facebook.com/trackalways"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="text-gray-600 hover:text-black"
+              >
+                <FaFacebookF size={20} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/trackalways/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Linkedin"
+                className="text-gray-600 hover:text-black"
+              >
+                <FaLinkedin size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/trackalwaysindia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-gray-600 hover:text-black"
+              >
+                <FaInstagram size={20} />
+              </a>
             </div>
           </div>
         </div>
@@ -171,31 +171,31 @@ const Footer = () => {
       <div className="mt-8 border-t border-gray-300"></div>
 
       <div className="flex flex-col md:flex-row items-center justify-between mx-auto px-4 py-4 text-gray-500">
-      
-      {/* Left Links Section */}
-      <div className="grid grid-cols-1 gap-2 text-center md:flex md:space-x-0 md:text-left mb-4 md:mb-4 lg:mb-0">
-        <HashLink to="#" className="hover:text-green-600 md:after:content-['|'] md:after:mx-2 last:after:content-['']">
-          Privacy Policy
-        </HashLink>
-        <HashLink to="#" className="hover:text-green-600 md:after:content-['|'] md:after:mx-2 last:after:content-['']">
-          Terms & Conditions
-        </HashLink>
-        <HashLink to="#" className="hover:text-green-600 md:after:content-['|'] md:after:mx-2 last:after:content-['']">
-          RRC Policies
-        </HashLink>
-        <HashLink to="#" className="hover:text-green-600">
-          Shipping Policies
-        </HashLink>
-      </div>
 
-      {/* Right Copyright Section */}
-      <div className="text-center md:text-right text-sm font-semibold">
-        &copy; {new Date().getFullYear()}{" "}
-        <HashLink to="#" className="hover:text-green-600">
-          Track Always
-        </HashLink>, Inc. All rights reserved.
+        {/* Left Links Section */}
+        <div className="grid grid-cols-1 gap-2 text-center md:flex md:space-x-0 md:text-left mb-4 md:mb-4 lg:mb-0">
+          <HashLink to="#" className="hover:text-green-600 md:after:content-['|'] md:after:mx-2 last:after:content-['']">
+            Privacy Policy
+          </HashLink>
+          <HashLink to="#" className="hover:text-green-600 md:after:content-['|'] md:after:mx-2 last:after:content-['']">
+            Terms & Conditions
+          </HashLink>
+          <HashLink to="#" className="hover:text-green-600 md:after:content-['|'] md:after:mx-2 last:after:content-['']">
+            RRC Policies
+          </HashLink>
+          <HashLink to="#" className="hover:text-green-600">
+            Shipping Policies
+          </HashLink>
+        </div>
+
+        {/* Right Copyright Section */}
+        <div className="text-center md:text-right text-sm font-semibold">
+          &copy; {new Date().getFullYear()}{" "}
+          <HashLink to="#" className="hover:text-green-600">
+            Track Always
+          </HashLink>, Inc. All rights reserved.
+        </div>
       </div>
-    </div>
     </footer>
   );
 };

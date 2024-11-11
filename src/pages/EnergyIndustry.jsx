@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../assets/industry.png';
+import banner from '../assets/industry-reduced.jpg';
 import { Helmet } from 'react-helmet-async';
 import rightVideo from '../assets/earth.mp4';
 import { FaArrowRight, FaBolt, FaChartLine, FaRecycle, FaWater } from 'react-icons/fa';

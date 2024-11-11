@@ -1,4 +1,4 @@
-import banner from '../assets/blog.png';
+import banner from '../assets/blog-reduced.jpg';
 import { Helmet } from 'react-helmet-async';
 import largeNewsImage from '../assets/m-banner.png';
 import newsImage1 from '../assets/m1.png';

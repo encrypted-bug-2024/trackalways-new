@@ -1,20 +1,10 @@
 import { useState } from 'react';
-import banner from '../assets/career.jpg';
+import banner from '../assets/career-reduced.jpg';
 import { FaArrowRight } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 
 const Career = () => {
   const [activeForm, setActiveForm] = useState('internship');
-  //   name: Deepak Kumar
-  // mobile: 9310142074
-  // email: leo.deepak25@gmail.com
-  // college_name: Dpg
-  // course: Bca
-  // specialization: CS
-  // batch: 2024
-  // resume: (binary)
-  // message: Hi
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,6 +19,7 @@ const Career = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [formErrors, setFormErrors] = useState({});
 
   // Update handleChange to show file name if selected
   const handleChange = (e) => {
@@ -43,28 +34,47 @@ const Career = () => {
     }
   };
 
-  // Conditionally set the API endpoint based on activeForm
+  // Validation function
+  const validateForm = () => {
+    const errors = {};
+    if (!formData.name) errors.name = 'Name is required';
+    if (!formData.email) errors.email = 'Email is required';
+    if (!formData.mobile) errors.mobile = 'Mobile number is required in 10 digit';
+    if (!formData.college_name) errors.college_name = 'College name is required';
+    if (!formData.course) errors.course = 'Course name is required';
+    if (!formData.specialization) errors.specialization = 'Specialization name is required';
+    if (!formData.batch) errors.batch = 'Batch name is required';
+    if (!formData.message) errors.message = 'Message is required';
+    if (activeForm !== 'internship' && !formData.job_profile) errors.job_profile = 'Job profile is required';
+    if (!formData.resume) errors.resume = 'Resume is required';
+
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate form before submitting
+    if (!validateForm()) return;
+
     setLoading(true);
     setError('');
 
     const formPayload = new FormData();
     if (activeForm === 'internship') {
       for (const key in formData) {
-        if (key == "job_profile" && activeForm === 'internship')
-          continue
+        if (key === 'job_profile' && activeForm === 'internship') continue;
         formPayload.append(key, formData[key]);
       }
-    }
-    else {
+    } else {
       const formData2 = {
-        name: formData["name"],
-        mobile: formData["mobile"],
-        email: formData["email"],
-        job_profile: formData["job_profile"], // This can be either "Developer" or "job"
-        resume: formData["resume"],
-        message: formData["message"]
+        name: formData['name'],
+        mobile: formData['mobile'],
+        email: formData['email'],
+        job_profile: formData['job_profile'],
+        resume: formData['resume'],
+        message: formData['message'],
       };
       for (const key in formData2) {
         formPayload.append(key, formData2[key]);
@@ -72,9 +82,9 @@ const Career = () => {
     }
 
     try {
-      const endpoint = activeForm === 'internship' ?
-        'http://localhost:8080/v1/apis/apply/internship' :
-        'http://localhost:8080/v1/apis/apply/job';
+      const endpoint = activeForm === 'internship'
+        ? 'http://localhost:8080/v1/apis/apply/internship'
+        : 'http://localhost:8080/v1/apis/apply/job';
 
       const response = await fetch(endpoint, {
         method: 'POST',
@@ -164,8 +174,8 @@ const Career = () => {
                   onChange={handleChange}
                   className="border border-gray-300 p-4 rounded w-full h-12 focus:outline-none focus:ring focus:ring-blue-500"
                   placeholder="Enter full name"
-                  required
                 />
+                {formErrors.name && <p style={{ color: 'red' }}>{formErrors.name}</p>}
               </div>
 
               <div className="flex flex-col">
@@ -177,8 +187,8 @@ const Career = () => {
                   onChange={handleChange}
                   className="border border-gray-300 p-4 rounded w-full h-12 focus:outline-none focus:ring focus:ring-blue-500"
                   placeholder="Enter email address"
-                  required
                 />
+                {formErrors.email && <p style={{ color: 'red' }}>{formErrors.email}</p>}
               </div>
 
               <div className="flex flex-col">
@@ -190,8 +200,9 @@ const Career = () => {
                   onChange={handleChange}
                   className="border border-gray-300 p-4 rounded w-full h-12 focus:outline-none focus:ring focus:ring-blue-500"
                   placeholder="Enter contact number"
-                  required
+
                 />
+                {formErrors.mobile && <p style={{ color: 'red' }}>{formErrors.mobile}</p>}
               </div>
 
               <div className="flex flex-col">
@@ -203,8 +214,9 @@ const Career = () => {
                   onChange={handleChange}
                   className="border border-gray-300 p-4 rounded w-full h-12 focus:outline-none focus:ring focus:ring-blue-500"
                   placeholder="Enter college name"
-                  required
+
                 />
+                {formErrors.college_name && <p style={{ color: 'red' }}>{formErrors.college_name}</p>}
               </div>
 
               <div className="flex flex-col">
@@ -216,8 +228,9 @@ const Career = () => {
                   onChange={handleChange}
                   className="border border-gray-300 p-4 rounded w-full h-12 focus:outline-none focus:ring focus:ring-blue-500"
                   placeholder="Enter course"
-                  required
+
                 />
+                {formErrors.course && <p style={{ color: 'red' }}>{formErrors.course}</p>}
               </div>
 
               <div className="flex flex-col">
@@ -229,8 +242,9 @@ const Career = () => {
                   onChange={handleChange}
                   className="border border-gray-300 p-4 rounded w-full h-12 focus:outline-none focus:ring focus:ring-blue-500"
                   placeholder="Enter specialization"
-                  required
+
                 />
+                {formErrors.specialization && <p style={{ color: 'red' }}>{formErrors.specialization}</p>}
               </div>
 
               <div className="flex flex-col">
@@ -242,8 +256,9 @@ const Career = () => {
                   onChange={handleChange}
                   className="border border-gray-300 p-4 rounded w-full h-12 focus:outline-none focus:ring focus:ring-blue-500"
                   placeholder="Enter year of internship"
-                  required
+
                 />
+                {formErrors.batch && <p style={{ color: 'red' }}>{formErrors.batch}</p>}
               </div>
 
               {/* Upload Resume */}
@@ -255,7 +270,7 @@ const Career = () => {
                   onChange={handleChange}
                   className="hidden"
                   id="uploadResume"
-                  required
+
                 />
                 <label
                   htmlFor="uploadResume"
@@ -263,6 +278,7 @@ const Career = () => {
                 >
                   Browse...
                 </label>
+                {formErrors.resume && <p style={{ color: 'red' }}>{formErrors.resume}</p>}
               </div>
             </div>
 
@@ -276,14 +292,20 @@ const Career = () => {
                 className="border border-gray-300 p-4 rounded w-full h-32 focus:outline-none focus:ring focus:ring-blue-500"
                 placeholder="Your message here..."
               ></textarea>
+              {formErrors.message && <p style={{ color: 'red' }}>{formErrors.message}</p>}
             </div>
 
             {/* Submit Button */}
             <div className="flex justify-center" style={{ marginTop: '90px', marginBottom: '60px' }}>
-              <button type="submit" className="bg-white text-[#439600] border border-[#439600] font-semibold px-16 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 ease-in-out">
+              <button
+                type="submit"
+                className="bg-white text-[#439600] border border-[#439600] font-semibold px-16 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 ease-in-out flex items-center"
+              >
                 {loading ? 'Submitting...' : 'Submit'}
+                <FaArrowRight className="ml-2" /> {/* Adds space between text and icon */}
               </button>
             </div>
+
             {error && <p className="text-red-600">{error}</p>}
           </form>
         )}
@@ -301,8 +323,9 @@ const Career = () => {
                   onChange={handleChange}
                   className="border border-gray-300 p-4 rounded w-full h-12 focus:outline-none focus:ring focus:ring-blue-500"
                   placeholder="Enter full name"
-                  required
+
                 />
+                {formErrors.name && <p style={{ color: 'red' }}>{formErrors.name}</p>}
               </div>
 
               <div className="flex flex-col">
@@ -314,8 +337,9 @@ const Career = () => {
                   onChange={handleChange}
                   className="border border-gray-300 p-4 rounded w-full h-12 focus:outline-none focus:ring focus:ring-blue-500"
                   placeholder="Enter email address"
-                  required
+
                 />
+                {formErrors.email && <p style={{ color: 'red' }}>{formErrors.email}</p>}
               </div>
 
               <div className="flex flex-col">
@@ -327,8 +351,9 @@ const Career = () => {
                   onChange={handleChange}
                   className="border border-gray-300 p-4 rounded w-full h-12 focus:outline-none focus:ring focus:ring-blue-500"
                   placeholder="Enter contact number"
-                  required
+
                 />
+                {formErrors.mobile && <p style={{ color: 'red' }}>{formErrors.mobile}</p>}
               </div>
 
               <div className="flex flex-col">
@@ -340,8 +365,9 @@ const Career = () => {
                   onChange={handleChange}
                   className="border border-gray-300 p-4 rounded w-full h-12 focus:outline-none focus:ring focus:ring-blue-500"
                   placeholder="Enter job profile"
-                  required
+
                 />
+                {formErrors.job_profile && <p style={{ color: 'red' }}>{formErrors.job_profile}</p>}
               </div>
 
               {/* Upload Resume for Job */}
@@ -353,7 +379,7 @@ const Career = () => {
                   onChange={handleChange}
                   className="hidden"
                   id="uploadResume"
-                  required
+
                 />
                 <label
                   htmlFor="uploadResume"
@@ -361,6 +387,7 @@ const Career = () => {
                 >
                   Browse...
                 </label>
+                {formErrors.resume && <p style={{ color: 'red' }}>{formErrors.resume}</p>}
                 {formData.resume && (
                   <p className="text-gray-600 mt-2">{formData.resume.name}</p>
                 )}
@@ -377,12 +404,17 @@ const Career = () => {
                 className="border border-gray-300 p-4 rounded w-full h-32 focus:outline-none focus:ring focus:ring-blue-500"
                 placeholder="Your message here..."
               ></textarea>
+              {formErrors.message && <p style={{ color: 'red' }}>{formErrors.message}</p>}
             </div>
 
             {/* Submit Button */}
             <div className="flex justify-center" style={{ marginTop: '90px', marginBottom: '60px' }}>
-              <button type="submit" className="bg-white text-[#439600] border border-[#439600] font-semibold px-16 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 ease-in-out">
+              <button
+                type="submit"
+                className="bg-white text-[#439600] border border-[#439600] font-semibold px-16 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 ease-in-out flex items-center"
+              >
                 {loading ? 'Submitting...' : 'Submit'}
+                <FaArrowRight className="ml-2" /> {/* Adds space between text and icon */}
               </button>
             </div>
             {error && <p className="text-red-600">{error}</p>}

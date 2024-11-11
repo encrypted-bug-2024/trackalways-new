@@ -5,6 +5,11 @@ const GetStartedSection = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
+  const handleBookDemoClick = () => {
+    // Scroll to the top before navigating
+    window.scrollTo(0, 0);
+};
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -42,7 +47,7 @@ const GetStartedSection = () => {
 
       <div className="flex flex-col sm:flex-row items-center">
         <p className="text-sm sm:text-base mb-4 sm:mb-0 sm:mr-4">Ready to get started?</p>
-        <Link to='/contact-us'>
+        <Link to='/contact-us' onClick={handleBookDemoClick}>
         <button className="bg-black text-white py-2 px-4 rounded-lg text-sm sm:text-base hover:bg-gray-800">
           Get Started
         </button>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import banner from '../assets/blog.png';
+import banner from '../assets/blog-reduced.jpg';
 import { Helmet } from 'react-helmet-async';
 
 const BlogSection = () => {
@@ -58,7 +58,7 @@ const BlogSection = () => {
           <img
             src={banner}
             alt="Banner"
-            className="absolute inset-0 w-full h-full object-fit"
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black bg-opacity-50">
             <h2 className="text-3xl mt-8 md:text-8xl">Blogs</h2>

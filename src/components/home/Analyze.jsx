@@ -7,6 +7,11 @@ const Analyze = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
+  const handleBookDemoClick = () => {
+    // Scroll to the top before navigating
+    window.scrollTo(0, 0);
+};
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -35,7 +40,7 @@ const Analyze = () => {
     <>
       <section
         ref={sectionRef}
-        className={`flex flex-col md:flex-row items-center justify-between w-11/12 mx-auto bg-white p-5 rounded-lg my-0 lg:my-0 gap-x-8 ${
+        className={`flex flex-col lg:flex-row items-center justify-between w-11/12 mx-auto bg-white p-5 rounded-lg my-0 lg:my-0 gap-x-8 ${
           isVisible ? 'animate-section' : ''
         }`}
       >
@@ -51,7 +56,7 @@ const Analyze = () => {
         </div>
 
         {/* Right Side: Text and Buttons */}
-        <div className={`flex-2 flex flex-col items-center md:items-start ${
+        <div className={`flex-2 flex flex-col items-center md:items-center lg:items-start ${
           isVisible ? 'animate-right-content' : 'hidden-content'
         }`}>
           {/* Heading */}
@@ -66,7 +71,7 @@ const Analyze = () => {
 
           {/* Button */}
           <div className="flex justify-center md:justify-start mt-1">
-            <Link to='/contact-us'>
+            <Link to='/contact-us' onClick={handleBookDemoClick}>
             <button className="bg-white text-[#439600] border border-[#439600] font-semibold px-8 py-3 rounded-tr-3xl rounded-bl-3xl shadow-md hover:bg-[#439600] hover:text-white transition duration-300 flex items-center justify-center">
               GET STARTED
               <FaArrowRight className="ml-2" />

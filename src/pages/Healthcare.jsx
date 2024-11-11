@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from 'react-helmet-async';
-import banner from '../assets/industry.png';
+import banner from '../assets/industry-reduced.jpg';
 import rightImage from '../assets/work.png';
 import { FaHeartbeat, FaRoute, FaLeaf, FaUsers, FaArrowRight } from 'react-icons/fa';
 

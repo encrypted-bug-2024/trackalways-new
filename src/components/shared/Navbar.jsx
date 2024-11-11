@@ -66,6 +66,11 @@ const Navbar = () => {
     closeDropdowns(); // Close dropdowns when the menu is closed
   };
 
+  const dropdownMouseLeave = () => {
+    setDiscoverOpen(false); // Close Solutions dropdown
+    setIndustriesOpen(false); // Close Industries dropdown
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -157,6 +162,7 @@ const Navbar = () => {
               {discoverOpen && (
                 <div
                   className="absolute left-1/2 transform -translate-x-[55%] mt-4 w-[80vw] bg-white rounded-lg border border-gray-200 shadow-lg"
+                  onMouseLeave={dropdownMouseLeave}
                 >
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
                     <DropdownItem
@@ -210,6 +216,7 @@ const Navbar = () => {
               {industriesOpen && (
                 <div
                   className="absolute left-1/2 transform -translate-x-[65%] mt-4 w-[80vw] bg-white rounded-lg border border-gray-200 shadow-lg"
+                  onMouseLeave={dropdownMouseLeave}
                 >
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
                     <DropdownItem
@@ -305,122 +312,128 @@ const Navbar = () => {
           {/* Menu Items */}
           <ul className="p-4 space-y-4">
             <li>
-              <NavLink to="/"  onClick={() => { closeMenu(); window.scrollTo(0, 0); }}  className="text-gray-800 hover:text-green-600">
+              <NavLink to="/" onClick={() => { closeMenu(); window.scrollTo(0, 0); }} className="text-gray-800 hover:text-green-600">
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/products"  onClick={() => { closeMenu(); window.scrollTo(0, 0); }} className="text-gray-800 hover:text-green-600">
+              <NavLink to="/products" onClick={() => { closeMenu(); window.scrollTo(0, 0); }} className="text-gray-800 hover:text-green-600">
                 Products
               </NavLink>
             </li>
 
             {/* Discover Dropdown */}
-<li>
-  <button
-    onClick={toggleDiscover}
-    className={`flex items-center justify-between w-full text-gray-800 ${discoverOpen ? "text-green-600" : "hover:text-green-600"}`}
-  >
-    Discover <FaAngleDown className={`ml-1 transform ${discoverOpen ? "rotate-180" : ""}`} />
-  </button>
-  {discoverOpen && (
-    <div className="mt-2 space-y-2 pl-4 border-l-2 border-green-600">
-      <DropdownItem
-        title="About Us"
-        to="/about-us"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/about-us'}
-      />
-      <DropdownItem
-        title="Contact Us"
-        to="/contact-us"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/contact-us'}
-      />
-      <DropdownItem
-        title="Careers"
-        to="/careers"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/careers'}
-      />
-      <DropdownItem
-        title="Blog"
-        to="/blog"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/blog'}
-      />
-      <DropdownItem
-        title="Media Coverage"
-        to="/media-coverage"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/media-coverage'}
-      />
-    </div>
-  )}
-</li>
+            <li>
+              <button
+                onClick={toggleDiscover}
+                className={`flex items-center justify-between w-full text-gray-800 ${discoverOpen ? "text-green-600" : "hover:text-green-600"}`}
+              >
+                Discover <FaAngleDown className={`ml-1 transform ${discoverOpen ? "rotate-180" : ""}`} />
+              </button>
+              {discoverOpen && (
+                <div className="mt-2 space-y-2 pl-4 border-l-2 border-green-600">
+                  <DropdownItem
+                    title="About Us"
+                    to="/about-us"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/about-us'}
+                  />
+                  <DropdownItem
+                    title="Contact Us"
+                    to="/contact-us"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/contact-us'}
+                  />
+                  <DropdownItem
+                    title="Careers"
+                    to="/careers"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/careers'}
+                  />
+                  <DropdownItem
+                    title="Blog"
+                    to="/blog"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/blog'}
+                  />
+                  <DropdownItem
+                    title="Media Coverage"
+                    to="/media-coverage"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/media-coverage'}
+                  />
+                </div>
+              )}
+            </li>
 
-{/* Industries Dropdown */}
-<li>
-  <button
-    onClick={toggleIndustries}
-    className={`flex items-center justify-between w-full text-gray-800 ${industriesOpen ? "text-green-600" : "hover:text-green-600"}`}
-  >
-    Industries <FaAngleDown className={`ml-1 transform ${industriesOpen ? "rotate-180" : ""}`} />
-  </button>
-  {industriesOpen && (
-    <div className="mt-2 space-y-2 pl-4 border-l-2 border-green-600">
-      <DropdownItem
-        title="Sales and Services"
-        to="/industry"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/industry'}
-      />
-      <DropdownItem
-        title="Energy"
-        to="/energy-industry"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/energy-industry'}
-      />
-      <DropdownItem
-        title="Passenger Transport"
-        to="/passanger-transport"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/passanger-transport'}
-      />
-      <DropdownItem
-        title="Health Care"
-        to="/health-care"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/health-care'}
-      />
-      <DropdownItem
-        title="Agriculture"
-        to="/agriculture"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/agriculture'}
-      />
-      <DropdownItem
-        title="Construction"
-        to="/construction"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/construction'}
-      />
-      <DropdownItem
-        title="Trucking"
-        to="/trucking"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/trucking'}
-      />
-      <DropdownItem
-        title="Security"
-        to="/security"
-        onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
-        isActive={location.pathname === '/security'}
-      />
-    </div>
-  )}
-</li>
-
+            {/* Industries Dropdown */}
+            <li>
+              <button
+                onClick={toggleIndustries}
+                className={`flex items-center justify-between w-full text-gray-800 ${industriesOpen ? "text-green-600" : "hover:text-green-600"}`}
+              >
+                Industries <FaAngleDown className={`ml-1 transform ${industriesOpen ? "rotate-180" : ""}`} />
+              </button>
+              {industriesOpen && (
+                <div className="mt-2 space-y-2 pl-4 border-l-2 border-green-600">
+                  <DropdownItem
+                    title="Sales and Services"
+                    to="/industry"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/industry'}
+                  />
+                  <DropdownItem
+                    title="Energy"
+                    to="/energy-industry"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/energy-industry'}
+                  />
+                  <DropdownItem
+                    title="Passenger Transport"
+                    to="/passanger-transport"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/passanger-transport'}
+                  />
+                  <DropdownItem
+                    title="Health Care"
+                    to="/health-care"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/health-care'}
+                  />
+                  <DropdownItem
+                    title="Agriculture"
+                    to="/agriculture"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/agriculture'}
+                  />
+                  <DropdownItem
+                    title="Construction"
+                    to="/construction"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/construction'}
+                  />
+                  <DropdownItem
+                    title="Trucking"
+                    to="/trucking"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/trucking'}
+                  />
+                  <DropdownItem
+                    title="Security"
+                    to="/security"
+                    onClick={() => { closeMenu(); window.scrollTo(0, 0); }}
+                    isActive={location.pathname === '/security'}
+                  />
+                </div>
+              )}
+            </li>
+            <li>
+              <NavLink to="/contact-us" onClick={() => { closeMenu(); window.scrollTo(0, 0); }} className="text-gray-800 hover:text-green-600">
+                <button className="bg-[#BEF269] hover:bg-[#439600] hover:text-white text-md text-black rounded-2xl py-2 px-4">
+                  Book A Demo
+                </button>
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
