@@ -95,7 +95,7 @@ const Track = () => {
           <img
             src={search}
             alt="Logo"
-            className="absolute logo-position max-w-[50px] left-[52px] bottom-[213px] md:left-[147px] md:bottom-[148px] lg:left-[455px] lg:-bottom-[50px] md:max-w-[100px] lg:max-w-[150px] h-auto"
+            className="absolute logo-position max-w-[50px] left-[52px] bottom-[238px] md:left-[147px] md:bottom-[148px] lg:left-[455px] lg:-bottom-[50px] md:max-w-[100px] lg:max-w-[150px] h-auto"
           />
         </div>
       </section>
