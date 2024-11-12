@@ -90,7 +90,7 @@ const ProductDetail = () => {
         <title>ProductDetails - TrackAlways</title>
         <meta name="description" content="Explore our range of innovative products designed to help you track and manage your operations efficiently." />
       </Helmet>
-      <div className="mt-40 px-4 md:px-10 lg:px-20">
+      <div className="mt-20 md:mt-40 px-4 md:px-10 lg:px-20">
         <div className="flex flex-col md:flex-col lg:flex-row items-start gap-6">
           {/* Thumbnails */}
           <div className="grid grid-cols-3 hidden lg:grid lg:grid-cols-1 gap-2 w-full lg:w-40 p-0">
